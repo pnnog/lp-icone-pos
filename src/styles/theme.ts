@@ -1,16 +1,16 @@
 export default {
   grid: {
-    container: '0rem',
-    gutter: '0rem'
+    container: '130rem',
+    gutter: '9rem'
   },
 
   border: {
-    radius: '0rem'
+    radius: '0.3rem'
   },
 
   font: {
     family:
-      "FonteDoProjeto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     light: 300,
     normal: 400,
     bold: 600,
@@ -20,18 +20,16 @@ export default {
       medium: '1.6rem',
       large: '1.8rem',
       xlarge: '2.0rem',
-      xxlarge: '2.8rem'
+      xxlarge: '2.8rem',
+      xxxlarge: '3.2 rem'
     }
   },
   colors: {
-    primary: '#FFFFFF',
-    secondary: '#FFFFFF',
-    mainBg: '#0000FF',
-    white: '#FAFAFA',
-    black: '#FFFFFF',
-    lightGray: '#EAEAEA',
-    gray: '#FFFFFF',
-    darkGray: '#FFFFFF'
+    primary: '#0C4A6E',
+    secondary: '#0284C7',
+    white: '#F8FAFC  ',
+    gray: '#475569 ',
+    darkGray: '#64748B'
   },
   spacings: {
     xxsmall: '0.8rem',
