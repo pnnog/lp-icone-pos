@@ -5,14 +5,14 @@ export default {
   },
 
   border: {
-    radius: '0.3rem'
+    radius: '0.4rem'
   },
 
   font: {
     family:
       "Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
-    light: 300,
-    normal: 400,
+    regular: 400,
+    medium: 500,
     bold: 600,
     sizes: {
       xxsmall: '1.0rem',
