@@ -22,13 +22,13 @@ export default {
       large: '1.8rem',
       xlarge: '2.0rem',
       xxlarge: '2.8rem',
-      xxxlarge: '3.2 rem'
+      xxxlarge: '3.2rem'
     }
   },
   colors: {
     primary: '#0C4A6E',
     secondary: '#0284C7',
-    white: '#F8FAFC  ',
+    white: '#F8FAFC',
     gray: '#475569 ',
     darkGray: '#64748B'
   },
