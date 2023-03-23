@@ -7,13 +7,12 @@ const wrapperModifiers = {
   `,
   medium: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xsmall};
-    font-weight: ${theme.font.medium};
+
     padding: ${theme.spacings.xxsmall} ${theme.spacings.medium};
     height: 3rem;
   `,
   large: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.medium};
-    font-weight: ${theme.font.bold};
     padding: ${theme.spacings.xsmall} ${theme.spacings.xxlarge};
     height: 5rem;
   `,
@@ -35,6 +34,7 @@ type WrapperProps = { hasIcon: boolean } & Pick<
 
 export const Wrapper = styled.a<WrapperProps>`
   ${({ theme, fullWidth, size, hasIcon }) => css`
+    font-weight: ${theme.font.medium};
     display: inline-flex;
     align-items: center;
     justify-content: center;

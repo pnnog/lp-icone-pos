@@ -46,6 +46,7 @@ export const MenuLink = styled.a`
     position: relative;
     color: ${theme.colors.white};
     cursor: pointer;
+    font-weight: ${theme.font.extraBold};
 
     &:hover {
       ::after {
@@ -110,6 +111,7 @@ export const FullMenu = styled.nav<FullMenuProps>`
 
     ${MenuLink} {
       font-size: ${theme.font.sizes.small};
+      font-weight: ${theme.font.bold};
       margin: 0 0 ${theme.spacings.small} 0;
       transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
       transition: transform 0.3s ease-in-out;
