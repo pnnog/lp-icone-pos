@@ -22,7 +22,3 @@ export const Wrapper = styled.div<LogoProps>`
     ${!!small && wrapperModifier.small()}
   `}
 `;
-export const Logo = styled.img`
-  width: 100%;
-  height: 100%;
-`;
