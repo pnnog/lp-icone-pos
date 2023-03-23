@@ -9,7 +9,7 @@ const wrapperModifier = {
   `
 };
 
-export const Wrapper = styled.div<LogoProps>`
+export const Wrapper = styled.figure<LogoProps>`
   ${({ small }) => css`
     width: 22.1rem;
     height: 4.7rem;
