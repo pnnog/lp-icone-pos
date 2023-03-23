@@ -7,7 +7,7 @@ const wrapperModifiers = {
   `,
   medium: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.xsmall};
-    font-weight: ${theme.font.bold};
+    font-weight: ${theme.font.medium};
     padding: ${theme.spacings.xxsmall} ${theme.spacings.medium};
     height: 3rem;
   `,
@@ -44,6 +44,7 @@ export const Wrapper = styled.a<WrapperProps>`
     background: ${theme.colors.secondary};
     color: ${theme.colors.white};
     padding: ${theme.spacings.xxsmall};
+    cursor: pointer;
 
     &:hover {
       background: linear-gradient(180deg, #0284c7 0%, #075985);

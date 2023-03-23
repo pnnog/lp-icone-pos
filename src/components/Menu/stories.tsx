@@ -16,6 +16,6 @@ export const Mobile: Story = (args) => <Menu {...args} />;
 export const Desktop: Story = (args) => <Menu {...args} />;
 Desktop.parameters = {
   viewport: {
-    defaultViewport: 'default'
+    defaultViewport: 'tablet'
   }
 };

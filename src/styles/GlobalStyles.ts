@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/montserrat-v25-latin-700.woff2') format('woff2')
+  src: url('/fonts/montserrat-v25-latin-regular.woff2') format('woff2')
 }
 
 @font-face {
@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
-  src: url('/fonts/montserrat-v25-latin-700.woff2') format('woff2')
+  src: url('/fonts/montserrat-v25-latin-500.woff2') format('woff2')
 }
 
 @font-face {
@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  src: url('/fonts/montserrat-v25-latin-700.woff2') format('woff2')
+  src: url('/fonts/montserrat-v25-latin-600.woff2') format('woff2')
 }
 
 @font-face {

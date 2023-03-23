@@ -14,6 +14,8 @@ export default {
     regular: 400,
     medium: 500,
     bold: 600,
+    extraBold: 700,
+
     sizes: {
       xxsmall: '1.0rem',
       xsmall: '1.2rem',
@@ -28,6 +30,7 @@ export default {
   colors: {
     primary: '#0C4A6E',
     secondary: '#0284C7',
+    lightBlue: '#0EA5E9',
     white: '#F8FAFC',
     gray: '#475569 ',
     darkGray: '#64748B'
