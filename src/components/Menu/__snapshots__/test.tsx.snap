@@ -61,6 +61,7 @@ exports[`<Menu /> should render full menu 1`] = `
   position: relative;
   color: #F8FAFC;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .c7:hover::after {
@@ -125,6 +126,7 @@ exports[`<Menu /> should render full menu 1`] = `
 
 .c11 .c6 {
   font-size: 1.4rem;
+  font-weight: 600;
   margin: 0 0 2.4rem 0;
   -webkit-transform: translateY(3rem);
   -ms-transform: translateY(3rem);
@@ -157,6 +159,7 @@ exports[`<Menu /> should render full menu 1`] = `
 
 .c12 .c6 {
   font-size: 1.4rem;
+  font-weight: 600;
   margin: 0 0 2.4rem 0;
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -200,7 +203,7 @@ exports[`<Menu /> should render full menu 1`] = `
     <a
       href="/"
     >
-      <div
+      <figure
         class="c2"
       >
         <svg
@@ -221,7 +224,7 @@ exports[`<Menu /> should render full menu 1`] = `
             fill="#F8FAFC"
           />
         </svg>
-      </div>
+      </figure>
     </a>
   </div>
   <div

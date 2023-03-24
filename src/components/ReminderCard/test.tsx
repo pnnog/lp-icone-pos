@@ -20,7 +20,7 @@ describe('<ReminderCard />', () => {
     expect(screen.getByText(props.date)).toBeInTheDocument();
 
     //Deve ter o ButtonLink renderizada
-    expect(screen.getByText(/Inscreva-se/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Inscreva-se/i)[0]).toBeInTheDocument();
     //Deve ter o title renderizado
     expect(
       screen.getByRole('heading', { name: props.title })
