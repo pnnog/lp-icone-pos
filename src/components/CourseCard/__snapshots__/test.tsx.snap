@@ -84,9 +84,9 @@ exports[`<CourseCard /> should render CourseCard 1`] = `
       class="c4"
       href="#"
     >
-       
+
       Especialização em implantodontia
-       
+
     </a>
   </div>
 </article>

@@ -65,6 +65,13 @@ export const LinkTitle = styled.a`
     color: ${theme.colors.white};
     font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.small};
+<<<<<<< HEAD
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xlarge};
+      padding: ${theme.spacings.small} 0;
+    `}
+=======
     display: inline-block;
     margin: auto;
     max-width: 13.6rem;
@@ -74,5 +81,6 @@ export const LinkTitle = styled.a`
       max-width: 22.5rem;
 
     `};
+>>>>>>> 7989fc727572f275a5eff8ca7ae5c7f1b7610b7f
   `}
 `;
