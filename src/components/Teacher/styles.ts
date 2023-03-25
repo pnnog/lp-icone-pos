@@ -9,14 +9,11 @@ export const Wrapper = styled.div`
 export const ImageWrapper = styled.figure`
   ${({ theme }) => css`
     height: 15rem;
-
     background-color: transparent;
-    margin-bottom: ${theme.spacings.xxsmall};
+    margin-bottom: ${theme.spacings.xsmall};
 
     ${media.greaterThan('medium')`
-      height: 37.5rem;
-
-
+      height: 48.2rem;
     `}
   `}
 `;
@@ -35,6 +32,8 @@ export const Name = styled.p`
     text-align: center;
 
     ${media.greaterThan('medium')`
-    font-size: ${theme.font.sizes.xxlarge}`}
+    font-size: ${theme.font.sizes.xxlarge};
+    font-weight: ${theme.font.extraBold};
+    `}
   `}
 `;
