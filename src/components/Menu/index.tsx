@@ -13,7 +13,7 @@ const Menu = () => {
     <S.Wrapper>
       <S.LogoWrapper>
         <Link href="/">
-          <Logo />
+          <Logo size="header" />
         </Link>
       </S.LogoWrapper>
 

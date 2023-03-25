@@ -1,10 +1,10 @@
 import * as S from './styles';
 
 export type LogoProps = {
-  small?: boolean;
+  size: 'footer' | 'header';
 };
-const Logo = ({ small = false }: LogoProps) => (
-  <S.Wrapper small={small}>
+const Logo = ({ size }: LogoProps) => (
+  <S.Wrapper size={size}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

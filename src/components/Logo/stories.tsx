@@ -19,11 +19,4 @@ export default {
   }
 } as Meta;
 
-export const Normal: Story<LogoProps> = (args) => <Logo {...args} />;
-Normal.args = {
-  small: false
-};
-export const Small: Story<LogoProps> = (args) => <Logo {...args} />;
-Small.args = {
-  small: true
-};
+export const Basic: Story<LogoProps> = (args) => <Logo {...args} />;

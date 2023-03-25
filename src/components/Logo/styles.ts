@@ -3,22 +3,29 @@ import media from 'styled-media-query';
 import { LogoProps } from '.';
 
 const wrapperModifier = {
-  small: () => css`
-    width: 10.2rem;
-    height: 3.6rem;
-  `
-};
+  footer: () => css`
+    width: 9.9rem;
+    height: 2.8rem;
 
-export const Wrapper = styled.figure<LogoProps>`
-  ${({ small }) => css`
+    ${media.greaterThan('medium')`
+    width: 23.2rem;
+    height: 6.2rem;
+    `}
+  `,
+
+  header: () => css`
     width: 22.1rem;
     height: 4.7rem;
 
     ${media.greaterThan('medium')`
-      width: 24.2rem;
-      height: 6.2rem;
-    `};
+    width: 24.2rem;
+    height: 6.2rem;
+    `}
+  `
+};
 
-    ${!!small && wrapperModifier.small()}
+export const Wrapper = styled.figure<LogoProps>`
+  ${({ size }) => css`
+    ${!!size && wrapperModifier[size]}
   `}
 `;
