@@ -3,14 +3,21 @@ import media from 'styled-media-query';
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+    position: absolute;
+    top: 8rem;
+    right: 2.4rem;
     background-color: ${theme.colors.white};
-    max-width: 20rem;
+    width: 20rem;
     padding: ${theme.spacings.xsmall} ${theme.spacings.xxsmall};
     border-radius: ${theme.border.radius};
 
     ${media.greaterThan('medium')`
-      max-width: 32rem;
+      width: 32rem;
       padding: ${theme.spacings.medium} ${theme.spacings.xsmall};
+      top: 10.3rem;
+      left: 10.5rem;
+
+
     `}
   `}
 `;

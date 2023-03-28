@@ -14,9 +14,6 @@ export default {
 
   parameters: {
     layout: 'fullscreen',
-    backgrounds: {
-      default: 'dark'
-    },
     viewport: {
       defaultViewport: 'mobile1'
     }
@@ -34,16 +31,15 @@ export default {
   }
 } as Meta;
 
-export const Basic: Story<ReminderCardProps> = (args) => (
-  <ReminderCard {...args} />
+export const Responsive: Story<ReminderCardProps> = (args) => (
+  <div
+    style={{
+      display: 'relative',
+      backgroundColor: 'grey',
+      maxWidth: '144rem',
+      height: '44rem'
+    }}
+  >
+    <ReminderCard {...args} />
+  </div>
 );
-
-export const Desktop: Story<ReminderCardProps> = (args) => (
-  <ReminderCard {...args} />
-);
-
-Desktop.parameters = {
-  viewport: {
-    defaultViewport: 'tablet'
-  }
-};
