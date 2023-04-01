@@ -4,7 +4,24 @@ import media from 'styled-media-query';
 export const Wrapper = styled.footer`
   ${({ theme }) => css`
     background-color: ${theme.colors.primary};
-    padding: ${theme.spacings.medium} 0;
+    padding-bottom: ${theme.spacings.medium};
+    padding-top: 10rem;
+    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
+
+    ${media.greaterThan('medium')`
+     clip-path:polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+     `}
+  `}
+`;
+
+export const Content = styled.div``;
+export const Copy = styled.p`
+  ${({ theme }) => css`
+    margin-top: ${theme.font.sizes.xxxlarge};
+    text-align: center;
+    color: ${theme.colors.white};
+    font-size: ${theme.font.sizes.xsmall};
+    font-weight: ${theme.font.regular};
   `}
 `;
 
@@ -36,7 +53,7 @@ export const SocialContent = styled.div`
 
       a {
         color: ${theme.colors.white};
-        width: 1.3rem;
+        width: 1.8rem;
         transition: colors 0.3 ease-in-out;
 
         :hover {
@@ -76,10 +93,10 @@ export const Logo2 = styled.figure`
 `;
 export const Title = styled.h3`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
-    margin-bottom: ${theme.spacings.xxsmall};
-    font-size: ${theme.font.sizes.xxsmall};
+    font-size: ${theme.font.sizes.medium};
     font-weight: ${theme.font.bold};
+    color: ${theme.colors.white};
+    margin-bottom: ${theme.spacings.xsmall};
 
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.medium};
@@ -99,7 +116,8 @@ export const Address = styled.div`
   ${({ theme }) => css`
     width: 16.7rem;
     a {
-      font-size: 0.8rem;
+      font-size: ${theme.font.sizes.small};
+      font-weight: ${theme.font.regular};
       color: ${theme.colors.white};
       text-decoration: none;
 
@@ -124,12 +142,12 @@ export const Contact = styled.div`
 
     p {
       margin-bottom: ${theme.spacings.xxsmall};
-      font-size: 0.8rem;
+      font-size: ${theme.font.sizes.small};
       font-weight: ${theme.font.regular};
     }
     svg {
-      width: 0.8rem;
-      height: 0.8rem;
+      width: 1.2rem;
+      height: 1.2rem;
     }
 
     ${media.greaterThan('medium')`

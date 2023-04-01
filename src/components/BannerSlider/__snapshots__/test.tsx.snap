@@ -1,0 +1,715 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BannerSlider /> should render BannerSlider with reminder data 1`] = `
+.c3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.c4 {
+  height: 44rem;
+}
+
+.c5 {
+  width: 100%;
+  height: 100%;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.c12 {
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  border: 0;
+  background: #0284C7;
+  color: #F8FAFC;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.8rem 3.2rem;
+  height: 3rem;
+  width: 100%;
+}
+
+.c12:hover {
+  background: linear-gradient(180deg,#0284c7 0%,#075985);
+}
+
+.c14 {
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  border: 0;
+  background: #0284C7;
+  color: #F8FAFC;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  padding: 1.6rem 5.6rem;
+  height: 5rem;
+  width: 100%;
+}
+
+.c14:hover {
+  background: linear-gradient(180deg,#0284c7 0%,#075985);
+}
+
+.c11 {
+  display: none;
+}
+
+.c13 {
+  display: none;
+}
+
+.c6 {
+  position: absolute;
+  top: 8rem;
+  right: 2.4rem;
+  background-color: #F8FAFC;
+  width: 20rem;
+  padding: 1.6rem 0.8rem;
+  border-radius: 0.4rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  color: #0284C7;
+}
+
+.c7 svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.8rem;
+}
+
+.c8 {
+  font-size: 1.0rem;
+  font-weight: 600;
+}
+
+.c8 span {
+  font-weight: 700;
+}
+
+.c9 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #0284C7;
+  max-width: 11rem;
+  margin-bottom: 0.8rem;
+}
+
+.c10 {
+  color: #0EA5E9;
+  font-size: 1.0rem;
+  font-weight: 400;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  margin-bottom: 1.6rem;
+}
+
+.c0 .slick-dots {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none;
+  margin-top: 4.0rem;
+}
+
+.c0 .slick-dots li {
+  background-color: transparent;
+  border: 0.1rem solid #0284C7;
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 0.8rem;
+}
+
+.c0 .slick-dots li.slick-active {
+  opacity: 0.75;
+  background-color: #0284C7;
+}
+
+.c0 .slick-dots button {
+  opacity: 0;
+  font-size: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.c0 .slick-slide {
+  visibility: hidden;
+}
+
+.c0 .slick-slide.slick-active.slick-current {
+  visibility: visible;
+}
+
+.c0 .slick-prev,
+.c0 .slick-next {
+  position: absolute;
+  z-index: 10;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid #0284C7;
+  border-radius: 50%;
+  cursor: pointer;
+  right: 4.5rem;
+  color: #0284C7;
+}
+
+.c0 .slick-next {
+  top: 37%;
+}
+
+.c0 .slick-prev {
+  top: 30%;
+}
+
+.c0 .slick-prev-disabled,
+.c0 .slick-next-disabled {
+  visibility: hidden;
+}
+
+.c1 .slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.c1 .slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.c1 .slick-list:focus {
+  outline: none;
+}
+
+.c1 .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.c1 .slick-slider .slick-track,
+.c1 .slick-slider .slick-list {
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.c1 .slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.c1 .slick-track:before,
+.c1 .slick-track:after {
+  display: table;
+  content: '';
+}
+
+.c1 .slick-track:after {
+  clear: both;
+}
+
+.c1 .slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.c1 .slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+.c1 [dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.c1 .slick-slide img {
+  display: block;
+}
+
+.c1 .slick-slide.slick-loading img {
+  display: none;
+}
+
+.c1 .slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.c1 .slick-initialized .slick-slide {
+  display: block;
+}
+
+.c1 .slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.c1 .slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.c1 .slick-arrow.slick-hidden {
+  display: none;
+}
+
+@media (min-width:768px) {
+  .c4 {
+    height: 49.5rem;
+  }
+}
+
+@media (max-width:768px) {
+  .c11 {
+    display: block;
+  }
+}
+
+@media (min-width:768px) {
+  .c13 {
+    display: block;
+  }
+}
+
+@media (min-width:768px) {
+  .c6 {
+    width: 32rem;
+    padding: 3.2rem 1.6rem;
+    top: 10.3rem;
+    left: 10.5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c7 {
+    margin-bottom: 1.6rem;
+  }
+
+  .c7 svg {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.6rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c8 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+
+@media (min-width:768px) {
+  .c9 {
+    font-size: 3.2rem;
+    margin-bottom: 1.6rem;
+    max-width: 100%;
+  }
+}
+
+@media (min-width:768px) {
+  .c10 {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 .slick-dots {
+    position: absolute;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    right: 4.3rem;
+    top: 50%;
+    margin: 0;
+  }
+
+  .c0 .slick-dots li {
+    margin-top: 0.8rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="slick-slider slick-vertical slick-initialized"
+      dir="ltr"
+    >
+      <svg
+        aria-hidden="true"
+        aria-label="Previous Banner Slide"
+        class="c2 slick-arrow slick-prev slick-disabled"
+        currentSlide="0"
+        data-role="none"
+        fill="currentColor"
+        focusable="false"
+        slideCount="3"
+        style="display: block;"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+        />
+      </svg>
+      <div
+        class="slick-list"
+        style="height: 0px;"
+      >
+        <div
+          class="slick-track"
+          style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+        >
+          <div
+            aria-hidden="false"
+            class="slick-slide slick-active slick-current"
+            data-index="0"
+            style="outline: none; width: 0px;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                class="c3"
+              >
+                <figure
+                  class="c4"
+                >
+                  <img
+                    alt="Especialização em implantodontia "
+                    class="c5"
+                    src="https://source.unsplash.com/user/willianjusten/1440x495"
+                  />
+                </figure>
+                <div
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      aria-label="Course Date"
+                      class="c2"
+                      fill="currentColor"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"
+                      />
+                    </svg>
+                    <div
+                      class="c8"
+                    >
+                      <p>
+                         Inicio do curso
+                      </p>
+                      <span>
+                        25/03/2023
+                      </span>
+                    </div>
+                  </div>
+                  <h1
+                    class="c9"
+                  >
+                    Especialização em implantodontia 
+                  </h1>
+                  <p
+                    class="c10"
+                  >
+                    Dr. Sandro Bittencourt | Dr. Márcio Marchionni
+                  </p>
+                  <div
+                    class="c11"
+                  >
+                    <a
+                      class="c12"
+                      href="https://web.whatsapp.com"
+                    >
+                      <span>
+                         
+                        Inscreva-se
+                         
+                      </span>
+                    </a>
+                  </div>
+                  <div
+                    class="c13"
+                  >
+                    <a
+                      class="c14"
+                      href="https://web.whatsapp.com"
+                    >
+                      <span>
+                         
+                        Inscreva-se
+                         
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="1"
+            style="outline: none; width: 0px;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                class="c3"
+              >
+                <figure
+                  class="c4"
+                >
+                  <img
+                    alt="Aperfeiçoamento em implantodontia"
+                    class="c5"
+                    src="https://source.unsplash.com/user/willianjusten/1440x495"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="2"
+            style="outline: none; width: 0px;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                class="c3"
+              >
+                <figure
+                  class="c4"
+                >
+                  <img
+                    alt="Implantodontia "
+                    class="c5"
+                    src="https://source.unsplash.com/user/willianjusten/1440x495"
+                  />
+                </figure>
+                <div
+                  class="c6"
+                >
+                  <div
+                    class="c7"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      aria-label="Course Date"
+                      class="c2"
+                      fill="currentColor"
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"
+                      />
+                    </svg>
+                    <div
+                      class="c8"
+                    >
+                      <p>
+                         Inicio do curso
+                      </p>
+                      <span>
+                        25/03/2024
+                      </span>
+                    </div>
+                  </div>
+                  <h1
+                    class="c9"
+                  >
+                    Implantodontia 
+                  </h1>
+                  <p
+                    class="c10"
+                  >
+                    Dr. Sandro Bittencourt | Dr. Márcio Marchionni
+                  </p>
+                  <div
+                    class="c11"
+                  >
+                    <a
+                      class="c12"
+                      href="https://web.whatsapp.com"
+                    >
+                      <span>
+                         
+                        Inscreva-se
+                         
+                      </span>
+                    </a>
+                  </div>
+                  <div
+                    class="c13"
+                  >
+                    <a
+                      class="c14"
+                      href="https://web.whatsapp.com"
+                    >
+                      <span>
+                         
+                        Inscreva-se
+                         
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <svg
+        aria-hidden="true"
+        aria-label="Next Banner Slide"
+        class="c2 slick-arrow slick-next"
+        currentSlide="0"
+        data-role="none"
+        fill="currentColor"
+        focusable="false"
+        slideCount="3"
+        style="display: block;"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+        />
+      </svg>
+      <ul
+        class="slick-dots"
+        style="display: block;"
+      >
+        <li
+          class="slick-active"
+        >
+          <button>
+            1
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            2
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            3
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;

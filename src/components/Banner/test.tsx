@@ -8,7 +8,8 @@ const props = {
   img: '/img/doc.png',
   date: '1/1/1',
   teacher: '123',
-  href: '123'
+  href: '123',
+  reminder: true
 };
 
 describe('<Banner />', () => {

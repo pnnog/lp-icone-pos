@@ -12,10 +12,4 @@ export default {
   }
 } as Meta;
 
-export const Mobile: Story = (args) => <Menu {...args} />;
-export const Desktop: Story = (args) => <Menu {...args} />;
-Desktop.parameters = {
-  viewport: {
-    defaultViewport: 'tablet'
-  }
-};
+export const Default: Story = (args) => <Menu {...args} />;

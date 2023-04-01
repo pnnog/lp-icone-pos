@@ -6,10 +6,4 @@ export default {
   component: Footer
 } as Meta;
 
-export const Basic: Story = (args) => (
-  <div style={{ width: '43rem' }}>
-    <Footer {...args} />
-  </div>
-);
-
-export const Desktop: Story = (args) => <Footer {...args} />;
+export const Default: Story = (args) => <Footer {...args} />;

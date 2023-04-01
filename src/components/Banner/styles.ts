@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const Wrapper = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
 `;

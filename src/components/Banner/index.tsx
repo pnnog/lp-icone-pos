@@ -1,15 +1,17 @@
 import * as S from './styles';
 import ReminderCard, { ReminderCardProps } from 'components/ReminderCard';
 
-export type BannerProps = { img: string } & ReminderCardProps;
+export type BannerProps = {
+  img: string;
+  reminder?: boolean;
+} & ReminderCardProps;
 
-const Banner = ({ img, ...props }: BannerProps) => (
+const Banner = ({ img, reminder, ...props }: BannerProps) => (
   <S.Wrapper>
     <S.ImageWrapper>
       <S.Image src={img} alt={props.title} />
     </S.ImageWrapper>
-
-    <ReminderCard {...props} />
+    {!!reminder && <ReminderCard {...props} />}
   </S.Wrapper>
 );
 
