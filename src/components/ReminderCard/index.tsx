@@ -28,7 +28,7 @@ const ReminderCard = ({ date, title, teacher, href }: ReminderCardProps) => (
     </MediaMatch>
 
     <MediaMatch greaterThan="medium">
-      <ButtonLink href={href} size="large" fullWidth>
+      <ButtonLink href="https://web.whatsapp.com/" size="large" fullWidth>
         Inscreva-se
       </ButtonLink>
     </MediaMatch>

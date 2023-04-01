@@ -15,6 +15,7 @@ export const Wrapper = styled.article`
 export const ImageBox = styled.figure`
   min-height: 14rem;
   width: 100%;
+
   background: #f6f7f8;
   background-image: linear-gradient(
     to right,
@@ -37,9 +38,9 @@ export const ImageBox = styled.figure`
 
 export const Image = styled.img`
   ${({ theme }) => css`
+    display: block;
     width: 100%;
     height: 100%;
-    display: block;
     border-top-left-radius: ${theme.border.radius};
     border-top-right-radius: ${theme.border.radius};
   `}
@@ -47,40 +48,34 @@ export const Image = styled.img`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    text-align: center;
-    padding: ${theme.spacings.xsmall} 0;
     background-color: ${theme.colors.secondary};
     border-bottom-left-radius: ${theme.border.radius};
     border-bottom-right-radius: ${theme.border.radius};
+    padding: ${theme.spacings.xsmall};
+    text-align: center;
 
     ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xlarge};
-      padding: ${theme.spacings.small} 0;
-    `}
+      padding: ${theme.spacings.small} ;
+    `};
   `}
 `;
 
-export const LinkTitle = styled.a`
+export const Caption = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.small};
-<<<<<<< HEAD
-
-    ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xlarge};
-      padding: ${theme.spacings.small} 0;
-    `}
-=======
     display: inline-block;
-    margin: auto;
-    max-width: 13.6rem;
+    word-break: break-word;
+    width: 13.6rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.xlarge};
       padding: ${theme.spacings.small} 0;
-      max-width: 22.5rem;
-
+      width: 22.5rem;
     `};
->>>>>>> 7989fc727572f275a5eff8ca7ae5c7f1b7610b7f
   `}
 `;

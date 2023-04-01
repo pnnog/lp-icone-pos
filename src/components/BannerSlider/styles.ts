@@ -39,6 +39,7 @@ export const Wrapper = styled.div`
 
     .slick-slide {
       visibility: hidden;
+
       &.slick-active.slick-current {
         visibility: visible;
       }
@@ -64,8 +65,8 @@ export const Wrapper = styled.div`
       top: 30%;
     }
 
-    .slick-prev-disabled,
-    .slick-next-disabled {
+    .slick-prev.slick-disabled,
+    .slick-next.slick-disabled {
       visibility: hidden;
     }
 

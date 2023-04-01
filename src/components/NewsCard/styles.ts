@@ -5,18 +5,19 @@ export const Wrapper = styled.article`
   ${() => css`
     display: flex;
     flex-direction: column;
-    width: 18rem;
+    width: 100%;
 
-    ${media.greaterThan('medium')`
-    width: 37rem;`}
+    > a {
+      text-decoration: none;
+    }
   `}
 `;
 export const ImageBox = styled.figure`
   ${({ theme }) => css`
+    border-radius: ${theme.border.radius};
     max-width: 100%;
     height: 18rem;
     background: #f6f7f8;
-    border-radius: ${theme.border.radius};
 
     background-image: linear-gradient(
       to right,
@@ -53,8 +54,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: transparent
-    text-align: start;
+    background-color: transparent;
     height: 100%;
   `}
 `;
@@ -89,15 +89,15 @@ export const Date = styled.p`
     `}
   `}
 `;
-export const Title = styled.a`
+export const Title = styled.p`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xsmall};
     font-weight: ${theme.font.medium};
     color: ${theme.colors.black};
     max-width: 100%;
-
+    text-decoration: underline;
     ${media.greaterThan('medium')`
     font-size: ${theme.font.sizes.medium}
-    `}
+    `};
   `}
 `;

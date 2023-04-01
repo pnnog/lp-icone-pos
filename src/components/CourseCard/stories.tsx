@@ -2,9 +2,9 @@ import { Meta, Story } from '@storybook/react';
 import CourseCard, { CourseCardProps } from '.';
 
 const props = {
-  title: 'Especialização em implantodontia',
-
-  href: '#'
+  caption: 'Especialização em implantodontia',
+  href: '#',
+  img: 'https://source.unsplash.com/user/willianjusten/200x140'
 };
 
 export default {
@@ -12,6 +12,9 @@ export default {
   component: CourseCard,
   args: {
     ...props
+  },
+  parameters: {
+    layout: 'fullscreen'
   }
 } as Meta;
 

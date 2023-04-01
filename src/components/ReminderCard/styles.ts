@@ -4,19 +4,19 @@ import media from 'styled-media-query';
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     position: absolute;
-    top: 8rem;
-    right: 2.4rem;
+    top: 10%;
+    right: 5%;
     background-color: ${theme.colors.white};
     width: 20rem;
     padding: ${theme.spacings.xsmall} ${theme.spacings.xxsmall};
     border-radius: ${theme.border.radius};
+    overflow-x: hidden;
 
     ${media.greaterThan('medium')`
       width: 32rem;
       padding: ${theme.spacings.medium} ${theme.spacings.xsmall};
-      top: 10.3rem;
-      left: 10.5rem;
-
+      top: 7%;
+      left: 5%;
 
     `}
   `}
@@ -27,6 +27,7 @@ export const DateWrapper = styled.div`
     align-items: center;
     margin-bottom: ${theme.spacings.xxsmall};
     color: ${theme.colors.secondary};
+    overflow-x: hidden;
 
     svg {
       width: 2.5rem;
@@ -66,13 +67,11 @@ export const Title = styled.h1`
     font-size: ${theme.font.sizes.small};
     font-weight: ${theme.font.regular};
     color: ${theme.colors.secondary};
-    max-width: 11rem;
     margin-bottom: ${theme.spacings.xxsmall};
 
     ${media.greaterThan('medium')`
     font-size: ${theme.font.sizes.xxxlarge};
     margin-bottom: ${theme.spacings.xsmall};
-    max-width: 100%;
     `}
   `}
 `;

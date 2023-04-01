@@ -17,7 +17,13 @@ const ButtonLink = ({
   fullWidth = false,
   ...props
 }: ButtonLinkProps) => (
-  <S.Wrapper fullWidth={fullWidth} size={size} hasIcon={!!icon} {...props}>
+  <S.Wrapper
+    fullWidth={fullWidth}
+    size={size}
+    hasIcon={!!icon}
+    target="_blank"
+    {...props}
+  >
     {!!icon && icon}
     {!!children && <span> {children} </span>}
   </S.Wrapper>
