@@ -3,18 +3,25 @@ import media from 'styled-media-query';
 
 export const Wrapper = styled.article`
   ${({ theme }) => css`
-    width: 100%;
-    height: 100%;
-    border-radius: ${theme.border.radius};
+    position: relative;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
     box-shadow: 1.8px 3.6px 1.8px rgba(0, 0, 0, 0.25);
+    background-color: ${theme.colors.white};
   `}
 `;
 
 export const ImageBox = styled.figure`
-  min-height: 14rem;
+  height: 18rem;
   width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 
   background: #f6f7f8;
   background-image: linear-gradient(
@@ -34,48 +41,34 @@ export const ImageBox = styled.figure`
       background-position: 40rem 0;
     }
   }
-`;
 
-export const Image = styled.img`
-  ${({ theme }) => css`
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-top-left-radius: ${theme.border.radius};
-    border-top-right-radius: ${theme.border.radius};
+  ${media.greaterThan('medium')`
+  height: 29rem;
   `}
 `;
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    background-color: ${theme.colors.secondary};
-    border-bottom-left-radius: ${theme.border.radius};
-    border-bottom-right-radius: ${theme.border.radius};
-    padding: ${theme.spacings.xsmall};
     text-align: center;
+    word-wrap: break-word;
+    margin: ${theme.spacings.xsmall};
+    a {
+      font-size: ${theme.font.sizes.small};
+      font-weight: ${theme.font.bold};
+      color: ${theme.colors.primary};
+      text-decoration: none;
 
-    ${media.greaterThan('medium')`
-      padding: ${theme.spacings.small} ;
-    `};
-  `}
-`;
-
-export const Caption = styled.p`
-  ${({ theme }) => css`
-    color: ${theme.colors.white};
-    font-weight: ${theme.font.bold};
-    font-size: ${theme.font.sizes.small};
-    display: inline-block;
-    word-break: break-word;
-    width: 13.6rem;
-
-    &:hover {
-      text-decoration: underline;
+      &:hover {
+        text-decoration: underline;
+      }
     }
+
     ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xlarge};
-      padding: ${theme.spacings.small} 0;
-      width: 22.5rem;
-    `};
+      margin: ${theme.spacings.medium};
+      a {
+        font-size: ${theme.font.sizes.medium};
+      }
+
+    `}
   `}
 `;

@@ -2,24 +2,23 @@ import Link from 'next/link';
 import * as S from './styles';
 
 export type CourseCardProps = {
-  caption: string;
+  id: string;
+  caption?: string;
   img: string;
-  href: string;
+  href?: string;
 };
 
-const CourseCard = ({ caption, href, img }: CourseCardProps) => (
+const CourseCard = ({ id, caption, href, img }: CourseCardProps) => (
   <S.Wrapper>
-    <Link href={href}>
-      <S.ImageBox>
-        <S.Image src={img} alt={caption} />
-      </S.ImageBox>
+    <S.ImageBox>
+      <img src={img} alt={caption || id} />
+    </S.ImageBox>
 
-      {!!caption && (
-        <S.Content>
-          <S.Caption> {caption} </S.Caption>
-        </S.Content>
-      )}
-    </Link>
+    {!!caption && href && (
+      <S.Content>
+        <Link href={href}>{caption}</Link>
+      </S.Content>
+    )}
   </S.Wrapper>
 );
 

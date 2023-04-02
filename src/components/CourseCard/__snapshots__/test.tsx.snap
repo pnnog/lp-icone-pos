@@ -2,9 +2,6 @@
 
 exports[`<CourseCard /> should render CourseCard 1`] = `
 .c0 {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.4rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12,7 +9,10 @@ exports[`<CourseCard /> should render CourseCard 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
   box-shadow: 1.8px 3.6px 1.8px rgba(0,0,0,0.25);
+  background-color: #F8FAFC;
 }
 
 .c1 {
@@ -25,43 +25,34 @@ exports[`<CourseCard /> should render CourseCard 1`] = `
   animation: placeholderShimmer 1s linear infinite forwards;
 }
 
-.c2 {
+.c1 img {
   width: 100%;
   height: 100%;
   display: block;
-  border-top-left-radius: 0.4rem;
-  border-top-right-radius: 0.4rem;
 }
 
-.c3 {
+.c2 {
   text-align: center;
-  padding: 1.6rem 0;
-  background-color: #0284C7;
-  border-bottom-left-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
+  word-wrap: break-word;
+  margin: 1.6rem;
 }
 
-.c4 {
-  color: #F8FAFC;
-  font-weight: 600;
+.c2 a {
   font-size: 1.4rem;
-  display: inline-block;
-  margin: auto;
-  max-width: 13.6rem;
+  font-weight: 600;
+  color: #0C4A6E;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2 a:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 @media (min-width:768px) {
-  .c3 {
+  .c2 a {
     font-size: 2.0rem;
-    padding: 2.4rem 0;
-  }
-}
-
-@media (min-width:768px) {
-  .c4 {
-    font-size: 2.0rem;
-    padding: 2.4rem 0;
-    max-width: 22.5rem;
   }
 }
 
@@ -73,20 +64,16 @@ exports[`<CourseCard /> should render CourseCard 1`] = `
   >
     <img
       alt="Especialização em implantodontia"
-      class="c2"
-      src="/img/pic1"
+      src="https://source.unsplash.com/user/willianjusten/200x141"
     />
   </figure>
   <div
-    class="c3"
+    class="c2"
   >
     <a
-      class="c4"
       href="#"
     >
-
       Especialização em implantodontia
-
     </a>
   </div>
 </article>

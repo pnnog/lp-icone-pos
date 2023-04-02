@@ -1,17 +1,12 @@
 import { Meta, Story } from '@storybook/react';
 import CourseCard, { CourseCardProps } from '.';
-
-const props = {
-  caption: 'Especialização em implantodontia',
-  href: '#',
-  img: 'https://source.unsplash.com/user/willianjusten/200x140'
-};
+import MockCourseCard from './mock';
 
 export default {
   title: 'CourseCard',
   component: CourseCard,
   args: {
-    ...props
+    ...MockCourseCard
   },
   parameters: {
     layout: 'fullscreen'

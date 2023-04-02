@@ -10,7 +10,22 @@ export const parameters = {
       date: /Date$/,
     },
   },
+
+  backgrounds: {
+    default: 'icone-darkblue',
+    values: [
+      {
+        name: 'icone-white',
+        value: theme.colors.white,
+      },
+      {
+        name: 'icone-darkblue',
+        value: theme.colors.primary,
+      },
+    ],
+  },
 }
+
 
 export const decorators = [
   (Story) => (
