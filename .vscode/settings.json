@@ -21,10 +21,10 @@
   // Workbench
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.labelFormat": "short",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "rose-pine-icons",
   "workbench.sideBar.location": "left",
   "workbench.list.smoothScrolling": true,
-  "workbench.colorTheme": "Dracula Soft",
+  "workbench.colorTheme": "Rosé Pine Moon",
   "workbench.activityBar.visible": true,
   "workbench.layoutControl.enabled": false,
 
