@@ -1,24 +1,17 @@
 import { screen } from '@testing-library/react';
 import { renderWithTheme } from 'utils/tests/helper';
+import MockNewsCard from './mock';
 
 import NewsCard from '.';
 
-const props = {
-  img: '/img/image.png',
-  date: '1 fev 2019',
-  title:
-    'Aluna Mirella Martins Costa recebe prêmio de honra ao mérito científico.'
-};
-
 describe('<NewsCard />', () => {
   it('should render NewsCard', () => {
-    renderWithTheme(<NewsCard {...props} />);
+    renderWithTheme(<NewsCard {...MockNewsCard} />);
 
-    expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
-      'src',
-      props.img
-    );
+    expect(
+      screen.getByRole('img', { name: MockNewsCard.title })
+    ).toHaveAttribute('src', MockNewsCard.img);
 
-    expect(screen.getByText(props.date)).toBeInTheDocument();
+    expect(screen.getByText(MockNewsCard.date)).toBeInTheDocument();
   });
 });

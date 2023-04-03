@@ -12,7 +12,7 @@ export const parameters = {
   },
 
   backgrounds: {
-    default: 'icone-darkblue',
+    default: 'icone-white',
     values: [
       {
         name: 'icone-white',

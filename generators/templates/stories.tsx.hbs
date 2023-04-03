@@ -4,11 +4,10 @@ import {{pascalCase name}} from '.';
 export default {
   title: '{{pascalCase name}}',
   component:{{pascalCase name}},
-  args: {
-    title: 'Título padrão para todos os stories caso nada seja passado',
-    description:
-      'Description padrão para todos os stories caso nada seja passado',
-  },
+  args: {},
+  parameters: {
+    layout:'fullscreen'
+  }
 } as Meta;
 
 export const Basic: Story = (args) => <{{pascalCase name}} {...args} />;

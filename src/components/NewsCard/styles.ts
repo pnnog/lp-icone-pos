@@ -6,10 +6,7 @@ export const Wrapper = styled.article`
     display: flex;
     flex-direction: column;
     width: 100%;
-
-    > a {
-      text-decoration: none;
-    }
+    height: 100%;
   `}
 `;
 export const ImageBox = styled.figure`
@@ -45,7 +42,7 @@ export const ImageBox = styled.figure`
     }
 
     ${media.greaterThan('medium')`
-    height: 37rem;
+      height: 24rem;
     `}
   `}
 `;
@@ -94,10 +91,10 @@ export const Title = styled.p`
     font-size: ${theme.font.sizes.xsmall};
     font-weight: ${theme.font.medium};
     color: ${theme.colors.black};
-    max-width: 100%;
     text-decoration: underline;
+
     ${media.greaterThan('medium')`
-    font-size: ${theme.font.sizes.medium}
+      font-size: ${theme.font.sizes.medium};
     `};
   `}
 `;
