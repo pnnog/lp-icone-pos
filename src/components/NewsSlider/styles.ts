@@ -31,15 +31,6 @@ export const Wrapper = styled.div`
       display: flex;
     }
 
-    .slick-slide {
-      visibility: hidden;
-    }
-
-    .slick-active,
-    .slick-current {
-      visibility: visible;
-    }
-
     .slick-prev,
     .slick-next {
       position: absolute;

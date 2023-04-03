@@ -43,7 +43,7 @@ export const ImageBox = styled.figure`
   }
 
   ${media.greaterThan('medium')`
-  height: 29rem;
+  height: 24rem;
   `}
 `;
 

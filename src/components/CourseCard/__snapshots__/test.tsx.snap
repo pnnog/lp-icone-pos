@@ -2,6 +2,7 @@
 
 exports[`<CourseCard /> should render CourseCard 1`] = `
 .c0 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -16,7 +17,7 @@ exports[`<CourseCard /> should render CourseCard 1`] = `
 }
 
 .c1 {
-  min-height: 14rem;
+  height: 18rem;
   width: 100%;
   background: #f6f7f8;
   background-image: linear-gradient( to right,#f6f7f8 0%,#edeef1 20%,#f6f7f8 40%,#f6f7f8 100% );
@@ -51,8 +52,18 @@ exports[`<CourseCard /> should render CourseCard 1`] = `
 }
 
 @media (min-width:768px) {
+  .c1 {
+    height: 24rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    margin: 3.2rem;
+  }
+
   .c2 a {
-    font-size: 2.0rem;
+    font-size: 1.6rem;
   }
 }
 

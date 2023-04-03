@@ -19,7 +19,6 @@ export const Wrapper = styled.section`
     }
 
     ${media.greaterThan('large')`
-
       .slick-slide > div {
         margin: 0 ${theme.spacings.medium};
 
@@ -28,7 +27,6 @@ export const Wrapper = styled.section`
       .slick-list {
       margin: 0 -${theme.spacings.medium};
     }
-
     `}
 
     .slick-prev,
@@ -44,11 +42,11 @@ export const Wrapper = styled.section`
     }
 
     .slick-prev {
-      left: -4rem;
+      left: -5.6rem;
     }
 
     .slick-next {
-      right: -4rem;
+      right: -5.6rem;
     }
 
     .slick-prev.slick-disabled,

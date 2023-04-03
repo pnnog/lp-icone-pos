@@ -15,7 +15,7 @@ const settings: CourseCardSliderSettings = {
   infinite: false,
   lazyLoad: 'ondemand',
   arrows: true,
-  slidesToShow: 3,
+  slidesToShow: 2,
   prevArrow: <ArrowPrev />,
   nextArrow: <ArrowNext />,
   responsive: [
@@ -23,14 +23,14 @@ const settings: CourseCardSliderSettings = {
       breakpoint: 1375,
       settings: {
         arrows: false,
-        slidesToShow: 3
+        slidesToShow: 1.8
       }
     },
     {
       breakpoint: 1024,
       settings: {
         arrows: false,
-        slidesToShow: 2.5
+        slidesToShow: 1.7
       }
     },
 
@@ -38,21 +38,21 @@ const settings: CourseCardSliderSettings = {
       breakpoint: 768,
       settings: {
         arrows: false,
-        slidesToShow: 1.8
+        slidesToShow: 1.6
       }
     },
     {
       breakpoint: 570,
       settings: {
         arrows: false,
-        slidesToShow: 1.4
+        slidesToShow: 1.5
       }
     },
     {
       breakpoint: 375,
       settings: {
         arrows: false,
-        slidesToShow: 1.2
+        slidesToShow: 1.3
       }
     }
   ]
