@@ -3,14 +3,8 @@ import media from 'styled-media-query';
 
 export const Wrapper = styled.footer`
   ${({ theme }) => css`
-    background-color: ${theme.colors.primary};
     padding-bottom: ${theme.spacings.medium};
     padding-top: 10rem;
-    clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0 100%);
-
-    ${media.greaterThan('medium')`
-     clip-path:polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
-     `}
   `}
 `;
 

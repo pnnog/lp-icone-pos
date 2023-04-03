@@ -10,12 +10,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <ThemeProvider theme={theme}>
         <Head>
-          <title>React Avançado - Boilerplate</title>
+          <title>ícone Pós</title>
           <link rel="shortcut icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="A simples project starter to work with TypeScript, React, NextJS and Styled Components."
+            content="A Ícone Pós-graduação traz cursos de especialização e atualização em Implantodontia."
           />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
