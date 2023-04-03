@@ -10,24 +10,23 @@ import * as S from './styles';
 const Menu = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <S.Wrapper>
-      <S.LogoWrapper>
-        <Link href="/">
-          <Logo size="header" />
-        </Link>
-      </S.LogoWrapper>
+    <S.Wrapper isOpen={isOpen}>
+      <Link href="/">
+        <Logo size="header" />
+      </Link>
 
-      <MediaMatch greaterThan="medium">
+      <MediaMatch greaterThan="large">
         <S.MenuNav>
-          <S.MenuLink href="#">Home</S.MenuLink>
-          <S.MenuLink href="#">Cursos</S.MenuLink>
-          <S.MenuLink href="#">A escola</S.MenuLink>
-          <S.MenuLink href="#">Corpo Docente</S.MenuLink>
-          <S.MenuLink href="#">Notícias</S.MenuLink>
+          <Link href="/"> Home</Link>
+          <Link href="/"> Cursos</Link>
+          <Link href="/"> A escola</Link>
+          <Link href="/"> Corpo Docente</Link>
+          <Link href="/"> Paciente</Link>
+          <Link href="/"> Notícias</Link>
         </S.MenuNav>
       </MediaMatch>
 
-      <MediaMatch lessThan="medium">
+      <MediaMatch lessThan="large">
         <S.IconWrapper>
           <MenuIcon
             role="button"
@@ -45,11 +44,12 @@ const Menu = () => {
         />
 
         <S.MenuNav>
-          <S.MenuLink href="#">Home</S.MenuLink>
-          <S.MenuLink href="#">Cursos</S.MenuLink>
-          <S.MenuLink href="#">A escola</S.MenuLink>
-          <S.MenuLink href="#">Corpo docente</S.MenuLink>
-          <S.MenuLink href="#">Notícias</S.MenuLink>
+          <Link href="/"> Home</Link>
+          <Link href="/"> Cursos</Link>
+          <Link href="/"> A escola</Link>
+          <Link href="/"> Corpo Docente</Link>
+          <Link href="/"> Paciente</Link>
+          <Link href="/"> Notícias</Link>
         </S.MenuNav>
       </S.FullMenu>
     </S.Wrapper>
