@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
+  overflow-x: hidden;
 `;
 
 export const SectionMenu = styled.section`

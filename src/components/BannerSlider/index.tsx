@@ -1,13 +1,13 @@
-import Banner, { BannerProps } from 'components/Banner';
 import {
-  ArrowDownward as ArrowNext,
-  ArrowUpward as ArrowPrev
+  ArrowDownward as NextArrowIcon,
+  ArrowUpward as PrevArrowIcon
 } from '@styled-icons/material-outlined';
-import * as S from './styles';
+
+import Banner, { BannerProps } from 'components/Banner';
 import Slider, { SliderSettings } from 'components/Slider';
-export type BannerSliderProps = {
-  items: BannerProps[];
-};
+import SlickButtonFix from 'utils/slick-button-fix';
+
+import * as S from './styles';
 
 const settings: SliderSettings = {
   slidesToShow: 1,
@@ -16,8 +16,16 @@ const settings: SliderSettings = {
   vertical: true,
   verticalSwiping: true,
   arrows: true,
-  nextArrow: <ArrowNext aria-label="Next Banner Slide" />,
-  prevArrow: <ArrowPrev aria-label="Previous Banner Slide" />,
+  nextArrow: (
+    <SlickButtonFix>
+      <NextArrowIcon aria-label="Next Banner Slide" />
+    </SlickButtonFix>
+  ),
+  prevArrow: (
+    <SlickButtonFix>
+      <PrevArrowIcon aria-label="Next Banner Slide" />
+    </SlickButtonFix>
+  ),
   responsive: [
     {
       breakpoint: 768,
@@ -28,6 +36,10 @@ const settings: SliderSettings = {
       }
     }
   ]
+};
+
+export type BannerSliderProps = {
+  items: BannerProps[];
 };
 
 const BannerSlider = ({ items }: BannerSliderProps) => (

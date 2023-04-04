@@ -3,6 +3,7 @@ import media from 'styled-media-query';
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+    margin: -0.1rem;
     .slick-dots {
       display: flex !important;
       justify-content: center;
@@ -14,13 +15,18 @@ export const Wrapper = styled.div`
         background-color: transparent;
         border: 0.1rem solid ${theme.colors.secondary};
         border-radius: 50%;
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.3rem;
+        height: 1.3rem;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0 ${theme.spacings.xxsmall};
+
+        ${media.greaterThan('medium')`
+        width: 1.6rem;
+        height: 1.6rem;
+        `}
 
         &.slick-active {
           opacity: 0.75;
@@ -49,8 +55,8 @@ export const Wrapper = styled.div`
     .slick-next {
       position: absolute;
       z-index: ${theme.layers.base};
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 3rem;
+      height: 3rem;
       border: 1px solid ${theme.colors.secondary};
       border-radius: 50%;
       cursor: pointer;

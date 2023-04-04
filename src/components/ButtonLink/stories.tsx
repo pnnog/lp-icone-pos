@@ -10,8 +10,6 @@ export default {
   },
 
   argTypes: {
-    fullWidth: { type: 'boolean' },
-    href: { type: 'string' },
     children: { type: 'string' },
     icon: {
       table: {

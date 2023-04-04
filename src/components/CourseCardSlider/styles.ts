@@ -3,6 +3,10 @@ import media from 'styled-media-query';
 
 export const Wrapper = styled.section`
   ${({ theme }) => css`
+    ${media.lessThan('huge')`
+      overflow-x: hidden;
+    `}
+
     position: relative;
 
     .slick-track,

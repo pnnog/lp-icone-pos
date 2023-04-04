@@ -24,7 +24,7 @@
   "workbench.iconTheme": "rose-pine-icons",
   "workbench.sideBar.location": "left",
   "workbench.list.smoothScrolling": true,
-  "workbench.colorTheme": "Rosé Pine Moon",
+  "workbench.colorTheme": "OM Theme (Night Owl Italic)",
   "workbench.activityBar.visible": true,
   "workbench.layoutControl.enabled": false,
 
@@ -48,9 +48,9 @@
   "editor.formatOnPaste": false,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
-  "editor.fontFamily": "'Operator Mono Lig Book', 'SF Mono', Consolas, 'Source Code Pro', 'Dank Mono', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
-  "editor.glyphMargin": false,
+  "editor.fontFamily": "'Fira Code', 'Operator Mono Lig Book', 'SF Mono', Consolas, 'Source Code Pro', 'Dank Mono', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
   "editor.fontLigatures": true,
+  "editor.glyphMargin": false,
 
   "editor.suggestSelection": "first",
 

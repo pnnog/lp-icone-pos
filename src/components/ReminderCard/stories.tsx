@@ -1,16 +1,12 @@
 import { Meta, Story } from '@storybook/react';
 import ReminderCard, { ReminderCardProps } from '.';
+import MockReminderCard from './mock';
 
 export default {
   title: 'ReminderCard',
   component: ReminderCard,
 
-  args: {
-    date: '29/03/2023',
-    title: 'Especialização implantodontia',
-    teacher: 'Dr. Sandro Bittencourt | Dr. Márcio Marchionni',
-    href: '#'
-  },
+  args: { ...MockReminderCard },
 
   parameters: {
     layout: 'fullscreen'
@@ -34,7 +30,7 @@ export const Responsive: Story<ReminderCardProps> = (args) => (
       display: 'relative',
       backgroundColor: 'grey',
       maxWidth: '144rem',
-      height: '44rem'
+      height: '60rem'
     }}
   >
     <ReminderCard {...args} />

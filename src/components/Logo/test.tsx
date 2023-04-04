@@ -2,38 +2,28 @@ import { render, screen } from '@testing-library/react';
 
 import Logo from '.';
 
-const props = {
-  alt: 'Logo branca escrito ícone. Pós graduação em odontologia'
-};
-
 describe('<Logo />', () => {
-  // 1. Deve renderizar com a src correta
-
-  // 2. Deve renderizar a logo pequena
-  it('should render normal Logo', () => {
-    render(<Logo />);
-    expect(screen.getByRole('img', { name: props.alt }).parentNode).toHaveStyle(
-      {
-        width: '22.1rem'
-      }
-    );
-  });
-
-  it('should render small Logo', () => {
-    render(<Logo small />);
-    expect(screen.getByRole('img', { name: props.alt }).parentNode).toHaveStyle(
-      {
-        width: '10.2rem'
-      }
-    );
-  });
-
-  it('should render Logo in big screen with this rules', () => {
-    const { container } = render(<Logo />);
+  it('should render header Logo', () => {
+    render(<Logo size="header" />);
     expect(
-      screen.getByRole('img', { name: props.alt }).parentNode
-    ).toHaveStyleRule('width', '24.2rem', { media: '(min-width: 768px)' });
+      screen.getByRole('img', {
+        name: /Logo branca escrito ícone. Pós graduação em odontologia/i
+      }).parentNode
+    ).toHaveStyle({
+      width: '22rem'
+    });
+  });
 
-    expect(container).toMatchSnapshot();
+  it('should render footer Logo', () => {
+    const { container } = render(<Logo size="footer" />);
+    expect(
+      screen.getByRole('img', {
+        name: /Logo branca escrito ícone. Pós graduação em odontologia/i
+      }).parentNode
+    ).toHaveStyle({
+      width: '10rem'
+    });
+
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

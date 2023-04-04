@@ -9,12 +9,12 @@ export const Wrapper = styled.article`
     width: 100%;
     height: 100%;
     box-shadow: 1.8px 3.6px 1.8px rgba(0, 0, 0, 0.25);
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.secondary};
   `}
 `;
 
 export const ImageBox = styled.figure`
-  height: 18rem;
+  height: 25rem;
   width: 100%;
 
   img {
@@ -43,7 +43,7 @@ export const ImageBox = styled.figure`
   }
 
   ${media.greaterThan('medium')`
-  height: 24rem;
+  height: 35rem;
   `}
 `;
 
@@ -52,10 +52,11 @@ export const Content = styled.div`
     text-align: center;
     word-wrap: break-word;
     margin: ${theme.spacings.xsmall};
+
     a {
       font-size: ${theme.font.sizes.small};
       font-weight: ${theme.font.bold};
-      color: ${theme.colors.primary};
+      color: ${theme.colors.white};
       text-decoration: none;
 
       &:hover {
@@ -66,7 +67,7 @@ export const Content = styled.div`
     ${media.greaterThan('medium')`
       margin: ${theme.spacings.medium};
       a {
-        font-size: ${theme.font.sizes.medium};
+        font-size: ${theme.font.sizes.large};
       }
 
     `}

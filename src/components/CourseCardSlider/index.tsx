@@ -1,12 +1,13 @@
 import {
-  ArrowDownward as ArrowNext,
-  ArrowUpward as ArrowPrev
+  ArrowDownward as NextArrowIcon,
+  ArrowUpward as PrevArrowIcon
 } from '@styled-icons/material-outlined';
 
 import CourseCard from 'components/CourseCard';
 import { CourseCardProps } from 'components/CourseCard';
 import Slider from 'components/Slider';
 import { SliderSettings } from 'components/Slider';
+import SlickButtonFix from 'utils/slick-button-fix';
 
 import * as S from './styles';
 
@@ -16,8 +17,16 @@ const settings: CourseCardSliderSettings = {
   lazyLoad: 'ondemand',
   arrows: true,
   slidesToShow: 2,
-  prevArrow: <ArrowPrev />,
-  nextArrow: <ArrowNext />,
+  nextArrow: (
+    <SlickButtonFix>
+      <NextArrowIcon />
+    </SlickButtonFix>
+  ),
+  prevArrow: (
+    <SlickButtonFix>
+      <PrevArrowIcon />
+    </SlickButtonFix>
+  ),
   responsive: [
     {
       breakpoint: 1375,
@@ -38,21 +47,21 @@ const settings: CourseCardSliderSettings = {
       breakpoint: 768,
       settings: {
         arrows: false,
-        slidesToShow: 1.6
+        slidesToShow: 1.4
       }
     },
     {
       breakpoint: 570,
       settings: {
         arrows: false,
-        slidesToShow: 1.5
+        slidesToShow: 1.2
       }
     },
     {
       breakpoint: 375,
       settings: {
         arrows: false,
-        slidesToShow: 1.3
+        slidesToShow: 1
       }
     }
   ]

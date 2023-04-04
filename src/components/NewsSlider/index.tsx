@@ -1,11 +1,13 @@
-import Slider, { SliderSettings } from 'components/Slider';
-import * as S from './styles';
-import NewsCard, { NewsCardProps } from 'components/NewsCard';
-
 import {
   ArrowDownward as NextArrowIcon,
   ArrowUpward as PrevArrowIcon
 } from '@styled-icons/material-outlined';
+
+import SlickButtonFix from 'utils/slick-button-fix';
+import NewsCard, { NewsCardProps } from 'components/NewsCard';
+import Slider, { SliderSettings } from 'components/Slider';
+
+import * as S from './styles';
 
 type NewsSliderSettings = SliderSettings;
 
@@ -13,8 +15,17 @@ const settings: NewsSliderSettings = {
   infinite: false,
   arrows: true,
   slidesToShow: 3,
-  nextArrow: <NextArrowIcon />,
-  prevArrow: <PrevArrowIcon />,
+  nextArrow: (
+    <SlickButtonFix>
+      <NextArrowIcon />
+    </SlickButtonFix>
+  ),
+  prevArrow: (
+    <SlickButtonFix>
+      <PrevArrowIcon />
+    </SlickButtonFix>
+  ),
+
   responsive: [
     {
       breakpoint: 1375,

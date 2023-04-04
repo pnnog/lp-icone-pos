@@ -4,7 +4,7 @@ import media from 'styled-media-query';
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: 5%;
     background-color: ${theme.colors.white};
     width: 20rem;
@@ -15,7 +15,6 @@ export const Wrapper = styled.div`
     ${media.greaterThan('medium')`
       width: 32rem;
       padding: ${theme.spacings.medium} ${theme.spacings.xsmall};
-      top: 7%;
       left: 5%;
 
     `}

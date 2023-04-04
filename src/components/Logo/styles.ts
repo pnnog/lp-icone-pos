@@ -4,17 +4,15 @@ import { LogoProps } from '.';
 
 const wrapperModifier = {
   footer: () => css`
-    width: 9.9rem;
-    height: 2.8rem;
+    width: 10rem;
 
     ${media.greaterThan('medium')`
-    width: 23.2rem;
-    height: 6.2rem;
+    width: 22rem;
     `}
   `,
 
   header: () => css`
-    width: 22.1rem;
+    width: 22rem;
     height: 4.7rem;
 
     ${media.greaterThan('medium')`
@@ -26,6 +24,10 @@ const wrapperModifier = {
 
 export const Wrapper = styled.figure<LogoProps>`
   ${({ size }) => css`
+    svg {
+      width: 100%;
+      height: 100%;
+    }
     ${!!size && wrapperModifier[size]}
   `}
 `;

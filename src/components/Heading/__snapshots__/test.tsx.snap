@@ -1,26 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Heading /> should render heading with white cosmetic  1`] = `
+exports[`<Heading /> should render bottom line with white color 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   font-size: 2.0rem;
   font-weight: 600;
-  color: #F8FAFC;
+  color: #334155;
 }
 
-.c0::before {
+.c0::after {
   content: '';
-  display: inline-block;
-  margin-right: 1.6rem;
-  width: 0.7rem;
-  height: 3.3rem;
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 10%;
+  height: 0.4rem;
   background-color: #F8FAFC;
 }
 
@@ -30,12 +32,10 @@ exports[`<Heading /> should render heading with white cosmetic  1`] = `
   }
 }
 
-<div>
-  <h2
-    class="c0"
-    color="white"
-  >
-    Corpo Docente
-  </h2>
-</div>
+<h2
+  class="c0"
+  color="white"
+>
+  Título teste
+</h2>
 `;

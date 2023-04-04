@@ -42,7 +42,9 @@ export const GlobalStyle = createGlobalStyle`
 
 
 body{
-  background-image: url('/img/background-image.jpg')
+  background-image: url('/img/background-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 

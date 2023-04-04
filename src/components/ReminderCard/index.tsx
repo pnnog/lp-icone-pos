@@ -1,16 +1,14 @@
 import { CalendarMonth as DateIcon } from '@styled-icons/material-outlined';
 import ButtonLink from 'components/ButtonLink';
-import MediaMatch from 'components/MediaMatch';
 import * as S from './styles';
 
 export type ReminderCardProps = {
   date: string;
   title: string;
-  teacher: string;
-  href: string;
+  teacher?: string;
 };
 
-const ReminderCard = ({ date, title, teacher, href }: ReminderCardProps) => (
+const ReminderCard = ({ date, title, teacher }: ReminderCardProps) => (
   <S.Wrapper>
     <S.DateWrapper>
       <DateIcon role="img" aria-label="Course Date" />
@@ -21,17 +19,9 @@ const ReminderCard = ({ date, title, teacher, href }: ReminderCardProps) => (
     </S.DateWrapper>
     <S.Title>{title}</S.Title>
     <S.Teacher>{teacher}</S.Teacher>
-    <MediaMatch lessThan="medium">
-      <ButtonLink href={href} size="medium" fullWidth>
-        Inscreva-se
-      </ButtonLink>
-    </MediaMatch>
-
-    <MediaMatch greaterThan="medium">
-      <ButtonLink href="https://web.whatsapp.com/" size="large" fullWidth>
-        Inscreva-se
-      </ButtonLink>
-    </MediaMatch>
+    <ButtonLink href="https://www.whatsapp.com.br" fullWidth>
+      Inscreva-se
+    </ButtonLink>
   </S.Wrapper>
 );
 
