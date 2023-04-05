@@ -24,7 +24,7 @@
   "workbench.iconTheme": "rose-pine-icons",
   "workbench.sideBar.location": "left",
   "workbench.list.smoothScrolling": true,
-  "workbench.colorTheme": "OM Theme (Night Owl Italic)",
+  "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
   "workbench.activityBar.visible": true,
   "workbench.layoutControl.enabled": false,
 
