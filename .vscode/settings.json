@@ -21,7 +21,7 @@
   // Workbench
   "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.labelFormat": "short",
-  "workbench.iconTheme": "rose-pine-icons",
+  "workbench.iconTheme": "eq-material-theme-icons",
   "workbench.sideBar.location": "left",
   "workbench.list.smoothScrolling": true,
   "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
