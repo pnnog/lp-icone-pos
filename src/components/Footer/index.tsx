@@ -1,6 +1,7 @@
 import Logo from 'components/Logo';
 import * as S from './styles';
 import Heading from 'components/Heading';
+import Link from 'next/link';
 
 const Footer = () => (
   <S.Wrapper>
@@ -59,11 +60,10 @@ const Footer = () => (
           Links
         </Heading>
         <nav>
-          <a href="#">Home</a>
-          <a href="#">Notícias</a>
-          <a href="#">Paciente</a>
-          <a href="#">Home</a>
-          <a href="#">Home</a>
+          <Link href="/"> Home </Link>
+          <Link href="/cursos"> Cursos </Link>
+          <Link href="/corpo-docente"> Corpo docente </Link>
+          <Link href="/paciente"> Paciente </Link>
         </nav>
       </S.Column>
       <S.Column>

@@ -247,6 +247,11 @@ exports[`<Menu /> should render full menu 1`] = `
       >
          Corpo Docente
       </a>
+      <a
+        href="/"
+      >
+         Paciente
+      </a>
     </div>
   </div>
   <div
@@ -306,6 +311,11 @@ exports[`<Menu /> should render full menu 1`] = `
         href="/"
       >
          Corpo Docente
+      </a>
+      <a
+        href="/"
+      >
+         Paciente
       </a>
     </div>
   </nav>

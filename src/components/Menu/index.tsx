@@ -18,8 +18,9 @@ const Menu = () => {
       <MediaMatch greaterThan="large">
         <S.MenuNav>
           <Link href="/"> Home</Link>
-          <Link href="/"> Cursos</Link>
-          <Link href="/"> Corpo Docente</Link>
+          <Link href="/cursos"> Cursos</Link>
+          <Link href="/corpo-docente"> Corpo docente</Link>
+          <Link href="/paciente"> Paciente</Link>
         </S.MenuNav>
       </MediaMatch>
 
@@ -42,8 +43,9 @@ const Menu = () => {
 
         <S.MenuNav>
           <Link href="/"> Home</Link>
-          <Link href="/"> Cursos</Link>
-          <Link href="/"> Corpo Docente</Link>
+          <Link href="/cursos"> Cursos</Link>
+          <Link href="/corpo-docente"> Corpo docente</Link>
+          <Link href="/paciente"> Paciente</Link>
         </S.MenuNav>
       </S.FullMenu>
     </S.Wrapper>
