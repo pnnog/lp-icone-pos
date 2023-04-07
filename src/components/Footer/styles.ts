@@ -2,7 +2,16 @@ import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 import * as HeadingsStyles from 'components//Heading/styles';
 
-export const Wrapper = styled.footer``;
+export const Wrapper = styled.footer`
+  ${({ theme }) => css`
+    padding-top: ${theme.spacings.xxlarge};
+    padding-bottom: ${theme.spacings.xsmall};
+
+    ${media.greaterThan('medium')`
+      padding-top: calc(${theme.spacings.xxlarge}* 2);
+      padding-bottom: ${theme.spacings.xsmall};`}
+  `}
+`;
 
 export const Logos = styled.div`
   ${({ theme }) => css`

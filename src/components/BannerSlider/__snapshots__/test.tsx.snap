@@ -439,7 +439,7 @@ exports[`<BannerSlider /> should render BannerSlider with reminder data 1`] = `
                   <img
                     alt="Especialização implantodontia"
                     class="c5"
-                    src="https://source.unsplash.com/user/willianjusten/1440x800"
+                    src="https://source.unsplash.com/user/willianjusten/1600x800"
                   />
                 </figure>
                 <div

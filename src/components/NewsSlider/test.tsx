@@ -1,5 +1,4 @@
 import '../../../.jest/match-media-mock';
-import { screen } from '@testing-library/react';
 
 import NewsSlider from '.';
 import { renderWithTheme } from 'utils/tests/helper';

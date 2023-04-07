@@ -51,7 +51,7 @@ export const Content = styled.div`
   ${({ theme }) => css`
     grid-area: content;
     padding-top: ${theme.spacings.small};
-    padding-right: ${theme.spacings.small};
+    padding-right: calc(${theme.grid.gutter} / 4);
     z-index: ${theme.layers.base};
 
     text-align: right;
@@ -61,7 +61,7 @@ export const Content = styled.div`
       text-align: left;
       padding-top: 0;
       padding-right: 0;
-      padding-left: ${theme.spacings.xxlarge};
+      padding-left: calc(${theme.grid.gutter} / 2);
       padding-bottom: ${theme.spacings.xxlarge};
     `}
   `}

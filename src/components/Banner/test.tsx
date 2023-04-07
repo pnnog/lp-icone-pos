@@ -1,30 +1,24 @@
 import { screen } from '@testing-library/react';
 import { renderWithTheme } from 'utils/tests/helper';
+import MockBanner from './mock';
 
 import Banner from '.';
 
-const props = {
-  title: 'Especialização implantodontia',
-  img: '/img/doc.png',
-  date: '1/1/1',
-  teacher: '123',
-  href: '123',
-  reminder: true
-};
-
 describe('<Banner />', () => {
   it('should render Banner', () => {
-    renderWithTheme(<Banner {...props} />);
+    renderWithTheme(<Banner {...MockBanner} />);
 
-    expect(screen.getByRole('img', { name: props.title })).toHaveAttribute(
+    expect(screen.getByRole('img', { name: MockBanner.title })).toHaveAttribute(
       'src',
-      props.img
+      MockBanner.img
     );
   });
 
   it('should render reminder card when date is passed', () => {
-    renderWithTheme(<Banner {...props} />);
+    renderWithTheme(<Banner {...MockBanner} />);
 
-    expect(screen.getByText(props.title)).toHaveStyle({ color: '#0284C7' });
+    expect(screen.getByText(MockBanner.title)).toHaveStyle({
+      color: '#0284C7'
+    });
   });
 });

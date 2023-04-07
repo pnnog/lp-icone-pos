@@ -51,6 +51,7 @@ exports[`<Menu /> should render full menu 1`] = `
 }
 
 .c4 a {
+  display: inline-block;
   margin-left: 3.2rem;
   font-size: 1.6rem;
   -webkit-text-decoration: none;
@@ -64,9 +65,9 @@ exports[`<Menu /> should render full menu 1`] = `
 .c4 a:hover::after {
   content: '';
   position: absolute;
-  display: block;
+  bottom: -0.5rem;
   height: 0.3rem;
-  background-color: #F8FAFC;
+  background-color: #F0632B;
   -webkit-animation: hoverAnimation 0.2s forwards;
   animation: hoverAnimation 0.2s forwards;
 }
@@ -176,7 +177,7 @@ exports[`<Menu /> should render full menu 1`] = `
 
 @media (min-width:768px) {
   .c0 {
-    padding: 4.0rem 0;
+    padding: 2.4rem 0;
   }
 }
 
@@ -244,22 +245,7 @@ exports[`<Menu /> should render full menu 1`] = `
       <a
         href="/"
       >
-         A escola
-      </a>
-      <a
-        href="/"
-      >
          Corpo Docente
-      </a>
-      <a
-        href="/"
-      >
-         Paciente
-      </a>
-      <a
-        href="/"
-      >
-         Notícias
       </a>
     </div>
   </div>
@@ -319,22 +305,7 @@ exports[`<Menu /> should render full menu 1`] = `
       <a
         href="/"
       >
-         A escola
-      </a>
-      <a
-        href="/"
-      >
          Corpo Docente
-      </a>
-      <a
-        href="/"
-      >
-         Paciente
-      </a>
-      <a
-        href="/"
-      >
-         Notícias
       </a>
     </div>
   </nav>

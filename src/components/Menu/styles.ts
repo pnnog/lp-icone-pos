@@ -12,7 +12,7 @@ export const Wrapper = styled.menu<FullMenuProps>`
     align-items: center;
 
     ${media.greaterThan('medium')`
-      padding: ${theme.spacings.large} 0;
+      padding: ${theme.spacings.small} 0;
     `};
   `}
 `;
@@ -29,6 +29,7 @@ export const IconWrapper = styled.div`
 export const MenuNav = styled.div`
   ${({ theme }) => css`
     a {
+      display: inline-block;
       margin-left: ${theme.spacings.medium};
       font-size: ${theme.font.sizes.medium};
       text-decoration: none;
@@ -41,9 +42,9 @@ export const MenuNav = styled.div`
         ::after {
           content: '';
           position: absolute;
-          display: block;
+          bottom: -0.5rem;
           height: 0.3rem;
-          background-color: ${theme.colors.white};
+          background-color: ${theme.colors.orange};
           animation: hoverAnimation 0.2s forwards;
           @keyframes hoverAnimation {
             from {

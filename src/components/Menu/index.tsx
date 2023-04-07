@@ -19,10 +19,7 @@ const Menu = () => {
         <S.MenuNav>
           <Link href="/"> Home</Link>
           <Link href="/"> Cursos</Link>
-          <Link href="/"> A escola</Link>
           <Link href="/"> Corpo Docente</Link>
-          <Link href="/"> Paciente</Link>
-          <Link href="/"> Notícias</Link>
         </S.MenuNav>
       </MediaMatch>
 
@@ -46,10 +43,7 @@ const Menu = () => {
         <S.MenuNav>
           <Link href="/"> Home</Link>
           <Link href="/"> Cursos</Link>
-          <Link href="/"> A escola</Link>
           <Link href="/"> Corpo Docente</Link>
-          <Link href="/"> Paciente</Link>
-          <Link href="/"> Notícias</Link>
         </S.MenuNav>
       </S.FullMenu>
     </S.Wrapper>

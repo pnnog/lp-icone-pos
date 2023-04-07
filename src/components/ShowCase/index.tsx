@@ -2,31 +2,31 @@ import * as S from './styles';
 
 import CourseCardSlider from 'components/CourseCardSlider';
 import { CourseCardProps } from 'components/CourseCard';
-import ButtonLink, { ButtonLinkProps } from 'components/ButtonLink';
 import Heading from 'components/Heading';
 import NewsSlider from 'components/NewsSlider';
 import { NewsCardProps } from 'components/NewsCard';
+import PacientBanner, { PacientBannerProps } from 'components/PacientBanner';
 
 export type ShowCaseProps = {
   heading?: string;
   courses?: CourseCardProps[];
   news?: NewsCardProps[];
-  button?: boolean;
-  description?: string;
+  pacienteHighlight?: PacientBannerProps;
+  children?: React.ReactNode;
 };
 const ShowCase = ({
   heading,
   courses,
   news,
-  description,
-  button
+  pacienteHighlight,
+  children
 }: ShowCaseProps) => (
   <S.Wrapper>
     {!!heading && <Heading>{heading} </Heading>}
-    {!!description && <p> {description} </p>}
+    {!!children && <p>{children}</p>}
     {!!courses && <CourseCardSlider items={courses} />}
     {!!news && <NewsSlider items={news} />}
-    {!!button && <ButtonLink>Inscreva-se</ButtonLink>}
+    {!!pacienteHighlight && <PacientBanner {...pacienteHighlight} />}
   </S.Wrapper>
 );
 

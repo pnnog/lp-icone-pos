@@ -29,17 +29,10 @@ const settings: CourseCardSliderSettings = {
   ),
   responsive: [
     {
-      breakpoint: 1375,
-      settings: {
-        arrows: false,
-        slidesToShow: 1.8
-      }
-    },
-    {
       breakpoint: 1024,
       settings: {
         arrows: false,
-        slidesToShow: 1.7
+        slidesToShow: 2
       }
     },
 
@@ -54,14 +47,14 @@ const settings: CourseCardSliderSettings = {
       breakpoint: 570,
       settings: {
         arrows: false,
-        slidesToShow: 1.2
+        slidesToShow: 1.3
       }
     },
     {
       breakpoint: 375,
       settings: {
         arrows: false,
-        slidesToShow: 1
+        slidesToShow: 1.2
       }
     }
   ]

@@ -1,6 +1,5 @@
 import { Meta, Story } from '@storybook/react';
 import ButtonLink, { ButtonLinkProps } from '.';
-import { ArrowUpward } from '@styled-icons/material-outlined/ArrowUpward';
 
 export default {
   title: 'ButtonLink',
@@ -10,12 +9,7 @@ export default {
   },
 
   argTypes: {
-    children: { type: 'string' },
-    icon: {
-      table: {
-        disable: true
-      }
-    }
+    children: { type: 'string' }
   },
 
   parameters: {
@@ -31,17 +25,12 @@ export const Normal: Story<ButtonLinkProps> = (args) => (
 );
 
 Normal.args = {
-  children: 'Ver mais',
-  size: 'medium'
+  children: 'Ver mais'
 };
 
 export const WithIcon: Story<ButtonLinkProps> = (args) => (
   <ButtonLink {...args} />
 );
-
-WithIcon.args = {
-  icon: <ArrowUpward />
-};
 
 export const FullWidth: Story<ButtonLinkProps> = (args) => (
   <ButtonLink {...args} />
