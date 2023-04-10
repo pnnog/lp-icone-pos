@@ -238,17 +238,17 @@ exports[`<Menu /> should render full menu 1`] = `
          Home
       </a>
       <a
-        href="/"
+        href="/cursos"
       >
          Cursos
       </a>
       <a
-        href="/"
+        href="/corpo-docente"
       >
-         Corpo Docente
+         Corpo docente
       </a>
       <a
-        href="/"
+        href="/paciente"
       >
          Paciente
       </a>
@@ -303,17 +303,17 @@ exports[`<Menu /> should render full menu 1`] = `
          Home
       </a>
       <a
-        href="/"
+        href="/cursos"
       >
          Cursos
       </a>
       <a
-        href="/"
+        href="/corpo-docente"
       >
-         Corpo Docente
+         Corpo docente
       </a>
       <a
-        href="/"
+        href="/paciente"
       >
          Paciente
       </a>

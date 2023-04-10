@@ -5,20 +5,22 @@ import { CourseCardProps } from 'components/CourseCard';
 import Heading from 'components/Heading';
 import NewsSlider from 'components/NewsSlider';
 import { NewsCardProps } from 'components/NewsCard';
-import PacientBanner, { PacientBannerProps } from 'components/PacientBanner';
+import PacientHighlight, {
+  PacientHighlightProps
+} from 'components/PacientHighlight';
 
 export type ShowCaseProps = {
   heading?: string;
   courses?: CourseCardProps[];
   news?: NewsCardProps[];
-  pacienteHighlight?: PacientBannerProps;
+  pacientHighlight?: PacientHighlightProps;
   children?: React.ReactNode;
 };
 const ShowCase = ({
   heading,
   courses,
   news,
-  pacienteHighlight,
+  pacientHighlight,
   children
 }: ShowCaseProps) => (
   <S.Wrapper>
@@ -26,7 +28,7 @@ const ShowCase = ({
     {!!children && <p>{children}</p>}
     {!!courses && <CourseCardSlider items={courses} />}
     {!!news && <NewsSlider items={news} />}
-    {!!pacienteHighlight && <PacientBanner {...pacienteHighlight} />}
+    {!!pacientHighlight && <PacientHighlight {...pacientHighlight} />}
   </S.Wrapper>
 );
 

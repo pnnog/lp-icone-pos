@@ -1,19 +1,28 @@
-import BannerSlider from 'components/BannerSlider';
 import Base from 'templates/Base';
-import MockBannerSlider from 'components/BannerSlider/mock';
-import * as S from './styles';
-import ShowCase from 'components/ShowCase';
-import mockCourses from 'components/CourseCardSlider/mock';
-import MockPacienteBanner from 'components/PacientBanner/mock';
-import MockNewsSlider from 'components/NewsSlider/mock';
 
-const Home = () => (
+import BannerSlider from 'components/BannerSlider';
+import ShowCase from 'components/ShowCase';
+import { BannerProps } from 'components/Banner';
+import { CourseCardProps } from 'components/CourseCard';
+import { PacientHighlightProps } from 'components/PacientHighlight';
+import { NewsCardProps } from 'components/NewsCard';
+
+import * as S from './styles';
+
+type HomeProps = {
+  banners: BannerProps[];
+  courses: CourseCardProps[];
+  pacientHighlight: PacientHighlightProps;
+  news: NewsCardProps[];
+};
+
+const Home = ({ banners, courses, pacientHighlight, news }: HomeProps) => (
   <Base>
     <S.SectionBanner>
-      <BannerSlider items={MockBannerSlider} />
+      <BannerSlider items={banners} />
     </S.SectionBanner>
 
-    <ShowCase heading="Cursos" courses={mockCourses} />
+    <ShowCase heading="Cursos" courses={courses} />
 
     <ShowCase heading="A Escola">
       Com a proposta de inovação na área de educação, a Ícone Pós-graduação
@@ -25,9 +34,9 @@ const Home = () => (
 
     <ShowCase
       heading="Central do paciente"
-      pacienteHighlight={MockPacienteBanner}
+      pacientHighlight={pacientHighlight}
     />
-    <ShowCase heading="Notícias" news={MockNewsSlider} />
+    <ShowCase heading="Notícias" news={news} />
   </Base>
 );
 

@@ -1,9 +1,9 @@
 import ButtonLink from 'components/ButtonLink';
 import * as S from './styles';
 
-export type PacientBannerProps = Record<'title' | 'float' | 'img', string>;
+export type PacientHighlightProps = Record<'title' | 'float' | 'img', string>;
 
-const PacientBanner = ({ title, float, img }: PacientBannerProps) => (
+const PacientHighlight = ({ title, float, img }: PacientHighlightProps) => (
   <S.Wrapper src={img}>
     <S.FloatImageWrapper>
       <S.FloatImage src={float} alt={title} />
@@ -15,4 +15,4 @@ const PacientBanner = ({ title, float, img }: PacientBannerProps) => (
   </S.Wrapper>
 );
 
-export default PacientBanner;
+export default PacientHighlight;
