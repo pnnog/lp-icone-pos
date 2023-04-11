@@ -8,15 +8,23 @@ const wrapperModifiers = {
   toRight: (theme: DefaultTheme) => css`
     grid-template-areas: 'description image';
 
-    ${Description} {
-      border-radius: ${theme.border.radius} 0 0 ${theme.border.radius};
+    ${ImageBox} {
+      text-align: right;
+
+      ::after {
+        left: auto;
+        right: 0;
+        background: linear-gradient(
+          90deg,
+          rgba(233, 245, 247, 1) 18%,
+          rgba(63, 147, 186, 1) 61%,
+          rgba(12, 74, 110, 1) 100%
+        );
+      }
     }
   `,
   toLeft: (theme: DefaultTheme) => css`
     grid-template-areas: 'image description';
-    ${Description} {
-      border-radius: 0 ${theme.border.radius} ${theme.border.radius} 0;
-    }
   `
 };
 
@@ -25,12 +33,10 @@ export const Wrapper = styled.div<WrapperProps>`
     width: 100%;
     height: 100%;
 
-    background: ${theme.colors.white};
-    box-shadow: 0 11rem 3rem 0 rgba(143, 177, 200, 0.22);
+    background: none;
     border-radius: ${theme.border.radius};
 
     display: grid;
-    grid-template-columns: 1fr;
 
     ${media.greaterThan('medium')`
       ${!!toRight && wrapperModifiers.toRight(theme)};
@@ -63,7 +69,7 @@ export const ImageBox = styled.figure`
       bottom: 0;
       left: 0;
       height: 1rem;
-      width: 100%;
+      width: 95%;
       background: linear-gradient(
         90deg,
         rgba(12, 74, 110, 1) 18%,
@@ -75,6 +81,7 @@ export const ImageBox = styled.figure`
     ${media.greaterThan('medium')`
       ::after{
         height: 1.2rem;
+        
         
       }
     `}
@@ -110,6 +117,7 @@ export const Role = styled.p`
 
 export const Description = styled.div`
   ${({ theme }) => css`
+    box-shadow: 0 1rem 3rem 0 rgba(143, 177, 200, 0.22);
     background-color: ${theme.colors.primary};
     padding: ${theme.spacings.small};
     border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
@@ -136,6 +144,7 @@ export const Description = styled.div`
 
     ${media.greaterThan('medium')`
       grid-area: description;
+      border-radius: ${theme.border.radius};
       li{
         font-size: ${theme.font.sizes.medium};
       }

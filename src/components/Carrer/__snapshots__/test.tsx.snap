@@ -4,11 +4,9 @@ exports[`<Carrer /> should render pic on left 1`] = `
 .c0 {
   width: 100%;
   height: 100%;
-  background: #F8FAFC;
-  box-shadow: 0 11rem 3rem 0 rgba(143,177,200,0.22);
+  background: none;
   border-radius: 0.4rem;
   display: grid;
-  grid-template-columns: 1fr;
 }
 
 .c1 {
@@ -32,36 +30,37 @@ exports[`<Carrer /> should render pic on left 1`] = `
   bottom: 0;
   left: 0;
   height: 1rem;
-  width: 100%;
+  width: 95%;
   background: linear-gradient( 90deg,rgba(12,74,110,1) 18%,rgba(63,147,186,1) 61%,rgba(233,245,247,1) 100% );
 }
 
-.c4 {
+.c3 {
   font-size: 1.8rem;
   font-weight: 700;
 }
 
-.c5 {
+.c4 {
   color: #475569;
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 2.4rem;
 }
 
-.c3 {
+.c2 {
+  box-shadow: 0 1rem 3rem 0 rgba(143,177,200,0.22);
   background-color: #0C4A6E;
   padding: 2.4rem;
   border-radius: 0 0 0.4rem 0.4rem;
 }
 
-.c3 h3,
-.c3 p,
-.c3 li {
+.c2 h3,
+.c2 p,
+.c2 li {
   text-align: justify;
   color: #F8FAFC;
 }
 
-.c3 ul {
+.c2 ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -73,7 +72,7 @@ exports[`<Carrer /> should render pic on left 1`] = `
   list-style: none;
 }
 
-.c3 li {
+.c2 li {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.8rem;
@@ -82,10 +81,6 @@ exports[`<Carrer /> should render pic on left 1`] = `
 @media (min-width:768px) {
   .c0 {
     grid-template-areas: 'image description';
-  }
-
-  .c0 .c2 {
-    border-radius: 0 0.4rem 0.4rem 0;
   }
 }
 
@@ -103,25 +98,26 @@ exports[`<Carrer /> should render pic on left 1`] = `
 }
 
 @media (min-width:768px) {
-  .c4 {
+  .c3 {
     font-size: 2.0rem;
     margin-bottom: 0.8rem;
   }
 }
 
 @media (min-width:768px) {
-  .c5 {
+  .c4 {
     font-size: 1.4rem;
     margin-bottom: 3.2rem;
   }
 }
 
 @media (min-width:768px) {
-  .c3 {
+  .c2 {
     grid-area: description;
+    border-radius: 0.4rem;
   }
 
-  .c3 li {
+  .c2 li {
     font-size: 1.6rem;
   }
 }
@@ -138,16 +134,16 @@ exports[`<Carrer /> should render pic on left 1`] = `
     />
   </figure>
   <div
-    class="c2 c3"
+    class="c2"
   >
     <h3
-      class="c4"
+      class="c3"
     >
        
       Doutor fulano
     </h3>
     <p
-      class="c5"
+      class="c4"
     >
        
       Especialista e Mestre em Cirurgia Buco Maxilo Facial
