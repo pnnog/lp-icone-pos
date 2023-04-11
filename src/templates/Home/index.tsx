@@ -9,7 +9,7 @@ import { NewsCardProps } from 'components/NewsCard';
 
 import * as S from './styles';
 
-type HomeProps = {
+export type HomeProps = {
   banners: BannerProps[];
   courses: CourseCardProps[];
   pacientHighlight: PacientHighlightProps;

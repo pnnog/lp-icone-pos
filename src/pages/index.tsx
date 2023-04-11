@@ -9,7 +9,7 @@ export default function Index() {
     <Home
       banners={mockBanners}
       courses={mockCourses}
-      pacientHighlights={mockPacientHighlights}
+      pacientHighlight={mockPacientHighlights}
       news={mockNews}
     />
   );
