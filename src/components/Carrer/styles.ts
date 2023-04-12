@@ -1,11 +1,11 @@
-import styled, { DefaultTheme, css } from 'styled-components';
+import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 import { CarrerProps } from '.';
 
 type WrapperProps = Pick<CarrerProps, 'toRight'>;
 
 const wrapperModifiers = {
-  toRight: (theme: DefaultTheme) => css`
+  toRight: () => css`
     grid-template-areas: 'description image';
 
     ${ImageBox} {
@@ -23,7 +23,7 @@ const wrapperModifiers = {
       }
     }
   `,
-  toLeft: (theme: DefaultTheme) => css`
+  toLeft: () => css`
     grid-template-areas: 'image description';
   `
 };
@@ -39,8 +39,8 @@ export const Wrapper = styled.div<WrapperProps>`
     display: grid;
 
     ${media.greaterThan('medium')`
-      ${!!toRight && wrapperModifiers.toRight(theme)};
-      ${!toRight && wrapperModifiers.toLeft(theme)};
+      ${!!toRight && wrapperModifiers.toRight()};
+      ${!toRight && wrapperModifiers.toLeft()};
      
     `}
   `}
