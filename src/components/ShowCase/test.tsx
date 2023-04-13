@@ -1,10 +1,17 @@
 import '../../../.jest/match-media-mock';
 import { screen } from '@testing-library/react';
 
-import ShowCase from '.';
+import ShowCase, { ShowCaseProps } from '.';
 import { renderWithTheme } from 'utils/tests/helper';
 
-import mockShowCase from './mock';
+import mockNews from 'components/NewsSlider/mock';
+import mockPacientHighlight from 'components/PacientHighlight/mock';
+
+const props: ShowCaseProps = {
+  heading: 'title test',
+  news: mockNews,
+  pacientHighlight: mockPacientHighlight
+};
 
 jest.mock('components/Heading', () => {
   return {
@@ -15,11 +22,11 @@ jest.mock('components/Heading', () => {
   };
 });
 
-jest.mock('components/CourseCardSlider', () => {
+jest.mock('components/Card', () => {
   return {
     __esModule: true,
     default: function Mock() {
-      return <div data-testid="Mock Course card slider"></div>;
+      return <div data-testid="Mock Card"></div>;
     }
   };
 });
@@ -45,10 +52,9 @@ jest.mock('components/PacientHighlight', () => {
 describe('<ShowCase />', () => {
   it('should render ShowCase', () => {
     const { container } = renderWithTheme(
-      <ShowCase {...mockShowCase}>children test</ShowCase>
+      <ShowCase {...props}>children test</ShowCase>
     );
     expect(screen.getByTestId('Mock Heading')).toBeInTheDocument();
-    expect(screen.getByTestId('Mock Course card slider')).toBeInTheDocument();
     expect(screen.getByTestId('Mock News Slider')).toBeInTheDocument();
     expect(screen.getByTestId('Mock Pacient Highlight')).toBeInTheDocument();
     expect(screen.getByText(/children test/i)).toBeInTheDocument();

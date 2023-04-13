@@ -41,11 +41,12 @@ exports[`<Card /> does not should render modal if no modalText is present 1`] = 
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 85%;
+  word-wrap: break-word;
 }
 
 .c6 {
   margin-bottom: 2.4rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #F8FAFC;
   text-shadow: 0 0.3rem 0.6rem rgba(0,0,0,0.4);
 }
@@ -150,7 +151,7 @@ exports[`<Card /> does not should render modal if no modalText is present 1`] = 
 
 @media (min-width:768px) {
   .c6 {
-    font-size: 2.8rem;
+    font-size: 2.0rem;
   }
 }
 

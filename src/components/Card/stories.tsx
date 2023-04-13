@@ -1,11 +1,11 @@
 import { Meta, Story } from '@storybook/react';
-import mock from './mock';
+import { mockPacientCards } from './mock';
 import Card, { CardProps } from '.';
 
 export default {
   title: 'Card',
   component: Card,
-  args: { ...mock },
+  args: { ...mockPacientCards[0] },
   parameters: {
     layout: 'fullscreen'
   }

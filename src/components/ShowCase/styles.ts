@@ -3,7 +3,6 @@ import media from 'styled-media-query';
 
 import Container from 'components/Container';
 import * as HeadingStyles from 'components/Heading/styles';
-import * as CoursesStyles from 'components/CourseCardSlider/styles';
 import * as PacientBannerStyles from 'components/PacientHighlight/styles';
 import * as NewsCardSlider from 'components/NewsSlider/styles';
 
@@ -34,12 +33,6 @@ export const Wrapper = styled(Container).attrs({ as: 'section' })`
       ${media.greaterThan('medium')`
         margin-bottom: ${theme.spacings.medium};
     `};
-    }
-
-    ${(CoursesStyles.Wrapper, NewsCardSlider.Wrapper)} {
-      ${media.lessThan('medium')`
-          margin-right: calc(-${theme.grid.gutter} / 4);
-        `}
     }
 
     ${PacientBannerStyles.Wrapper} {

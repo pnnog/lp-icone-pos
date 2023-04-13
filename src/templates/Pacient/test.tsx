@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 import PacientTemplate from '.';
 import { renderWithTheme } from 'utils/tests/helper';
-import mock from './mock';
+import { mockPacientCards } from 'components/Card/mock';
 
 jest.mock('components/Card', () => {
   return {
@@ -14,7 +14,7 @@ jest.mock('components/Card', () => {
 
 describe('<PacientTemplate />', () => {
   it('should render PacientTemplate', () => {
-    renderWithTheme(<PacientTemplate cards={mock} />);
+    renderWithTheme(<PacientTemplate cards={mockPacientCards} />);
 
     expect(screen.getAllByTestId('mock card')).toHaveLength(5);
   });

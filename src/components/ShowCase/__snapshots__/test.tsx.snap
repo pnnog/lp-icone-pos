@@ -40,10 +40,6 @@ exports[`<ShowCase /> should render ShowCase 1`] = `
 
 }
 
-@media (max-width:768px) {
-
-}
-
 <div>
   <section
     class="c0 c1"
@@ -54,9 +50,6 @@ exports[`<ShowCase /> should render ShowCase 1`] = `
     <p>
       children test
     </p>
-    <div
-      data-testid="Mock Course card slider"
-    />
     <div
       data-testid="Mock News Slider"
     />

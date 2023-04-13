@@ -3,15 +3,19 @@ import Base from 'templates/Base';
 import BannerSlider from 'components/BannerSlider';
 import ShowCase from 'components/ShowCase';
 import { BannerProps } from 'components/Banner';
-import { CourseCardProps } from 'components/CourseCard';
 import { PacientHighlightProps } from 'components/PacientHighlight';
 import { NewsCardProps } from 'components/NewsCard';
 
 import * as S from './styles';
+import Heading from 'components/Heading';
+import Card from 'components/Card/';
+import { CardProps } from 'components/Card';
+import Link from 'next/link';
+import Grid from 'components/Grid';
 
 export type HomeTemplateProps = {
   banners: BannerProps[];
-  courses: CourseCardProps[];
+  courses: CardProps[];
   pacientHighlight: PacientHighlightProps;
   news: NewsCardProps[];
 };
@@ -27,7 +31,17 @@ const HomeTemplate = ({
       <BannerSlider items={banners} />
     </S.SectionBanner>
 
-    <ShowCase heading="Cursos" courses={courses} />
+    <S.SectionCourses>
+      <Heading> Cursos </Heading>
+
+      <Grid>
+        {courses.map((course) => (
+          <Link key={course.title} href="/cursos">
+            <Card {...course} />
+          </Link>
+        ))}
+      </Grid>
+    </S.SectionCourses>
 
     <ShowCase heading="A Escola">
       Com a proposta de inovação na área de educação, a Ícone Pós-graduação

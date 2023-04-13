@@ -59,15 +59,16 @@ export const Content = styled.div`
   left: 50%;
   transform: translateX(-50%);
   width: 85%;
+  word-wrap: break-word;
 `;
 export const Title = styled.h2`
   ${({ theme }) => css`
     margin-bottom: ${theme.spacings.small};
-    font-size: ${theme.font.sizes.large};
+    font-size: ${theme.font.sizes.medium};
     color: ${theme.colors.white};
     text-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.4);
     ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xxlarge};
+      font-size: ${theme.font.sizes.xlarge};
     `}
   `}
 `;

@@ -1,25 +1,24 @@
 import { fireEvent, screen } from '@testing-library/react';
-import mock from './mock';
+import { mockPacientCards } from './mock';
 
 import Card from '.';
 import { renderWithTheme } from 'utils/tests/helper';
 
 describe('<Card />', () => {
   it('should render Card with title and img', () => {
-    renderWithTheme(<Card {...mock} />);
+    renderWithTheme(<Card {...mockPacientCards[0]} />);
 
     expect(
-      screen.getByRole('heading', { name: mock.title })
+      screen.getByRole('heading', { name: mockPacientCards[0].title })
     ).toBeInTheDocument();
 
-    expect(screen.getByRole('img', { name: mock.title })).toHaveAttribute(
-      'src',
-      mock.img
-    );
+    expect(
+      screen.getByRole('img', { name: mockPacientCards[0].title })
+    ).toHaveAttribute('src', mockPacientCards[0].img);
   });
 
   it('should render modal open', () => {
-    renderWithTheme(<Card {...mock} />);
+    renderWithTheme(<Card {...mockPacientCards[0]} />);
 
     //seleciona o modal
     const modal = screen.getByLabelText('modal');
@@ -40,7 +39,7 @@ describe('<Card />', () => {
   });
 
   it('should render modal close', () => {
-    renderWithTheme(<Card {...mock} />);
+    renderWithTheme(<Card {...mockPacientCards[0]} />);
 
     //seleciona o modal
     const modal = screen.getByLabelText('modal');
@@ -65,15 +64,15 @@ describe('<Card />', () => {
   });
 
   it('should render modal content', () => {
-    renderWithTheme(<Card {...mock} />);
+    renderWithTheme(<Card {...mockPacientCards[0]} />);
     const openModalButton = screen.getByRole('button', { name: /open modal/i });
 
     fireEvent.click(openModalButton);
-    expect(screen.getAllByRole('heading', { name: mock.title })).toHaveLength(
-      2
-    );
+    expect(
+      screen.getAllByRole('heading', { name: mockPacientCards[0].title })
+    ).toHaveLength(2);
 
-    expect(screen.getByText(mock.modal));
+    expect(screen.getByText(mockPacientCards[0].modal));
   });
 
   it('does not should render modal if no modalText is present', () => {

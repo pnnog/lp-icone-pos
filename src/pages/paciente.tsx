@@ -1,6 +1,6 @@
 import PacientTemplate from 'templates/Pacient';
-import mock from 'templates/Pacient/mock';
+import { mockPacientCards } from 'components/Card/mock';
 
 export default function Paciente() {
-  return <PacientTemplate cards={mock} />;
+  return <PacientTemplate cards={mockPacientCards} />;
 }
