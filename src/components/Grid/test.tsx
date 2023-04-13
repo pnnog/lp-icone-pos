@@ -10,7 +10,13 @@ describe('<Grid />', () => {
         display: grid;
         grid-template-columns: repeat(auto-fill,minmax(25rem,1fr));
         grid-gap: 3.2rem;
-        margin: 3.2rem 0;
+        margin: 1.6rem 0;
+      }
+
+      @media (min-width:768px) {
+        .c0 {
+          margin: 3.2rem 0;
+        }
       }
 
       <div

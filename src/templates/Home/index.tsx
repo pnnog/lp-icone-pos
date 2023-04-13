@@ -9,14 +9,19 @@ import { NewsCardProps } from 'components/NewsCard';
 
 import * as S from './styles';
 
-export type HomeProps = {
+export type HomeTemplateProps = {
   banners: BannerProps[];
   courses: CourseCardProps[];
   pacientHighlight: PacientHighlightProps;
   news: NewsCardProps[];
 };
 
-const Home = ({ banners, courses, pacientHighlight, news }: HomeProps) => (
+const HomeTemplate = ({
+  banners,
+  courses,
+  pacientHighlight,
+  news
+}: HomeTemplateProps) => (
   <Base>
     <S.SectionBanner>
       <BannerSlider items={banners} />
@@ -40,4 +45,4 @@ const Home = ({ banners, courses, pacientHighlight, news }: HomeProps) => (
   </Base>
 );
 
-export default Home;
+export default HomeTemplate;

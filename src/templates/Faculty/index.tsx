@@ -5,11 +5,11 @@ import Container from 'components/Container';
 import ShowCase from 'components/ShowCase';
 import Heading from 'components/Heading';
 
-type FacultyProps = {
+type FacultyTemplateProps = {
   coordinators: CarrerProps[];
   teachers: CarrerProps[];
 };
-const Faculty = ({ coordinators, teachers }: FacultyProps) => (
+const FacultyTemplate = ({ coordinators, teachers }: FacultyTemplateProps) => (
   <Base>
     <S.Introduction>
       <ShowCase heading="Corpo docente">
@@ -35,4 +35,4 @@ const Faculty = ({ coordinators, teachers }: FacultyProps) => (
   </Base>
 );
 
-export default Faculty;
+export default FacultyTemplate;

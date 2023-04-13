@@ -24,7 +24,7 @@
   "workbench.iconTheme": "eq-material-theme-icons",
   "workbench.sideBar.location": "left",
   "workbench.list.smoothScrolling": true,
-  "workbench.colorTheme": "Dracula.min",
+  "workbench.colorTheme": "Dracula",
   "workbench.activityBar.visible": true,
   "workbench.layoutControl.enabled": false,
 

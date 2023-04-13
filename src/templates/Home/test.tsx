@@ -1,11 +1,11 @@
 import '../../../.jest/match-media-mock';
 
-import Home from '.';
+import HomeTemplate from '.';
 import { renderWithTheme } from 'utils/tests/helper';
 import mockHome from './mock';
 
-describe('<Home />', () => {
-  it('should render Home', () => {
-    renderWithTheme(<Home {...mockHome} />);
+describe('<HomeTemplate />', () => {
+  it('should render HomeTemplate', () => {
+    renderWithTheme(<HomeTemplate {...mockHome} />);
   });
 });

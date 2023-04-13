@@ -11,7 +11,7 @@ export const Wrapper = styled(Container).attrs({ as: 'section' })`
   ${({ theme }) => css`
     margin-bottom: ${theme.spacings.xlarge};
 
-    >p{
+    > p {
       color: ${theme.colors.black};
       font-size: ${theme.font.sizes.medium};
       font-weight: ${theme.font.regular};
@@ -42,10 +42,10 @@ export const Wrapper = styled(Container).attrs({ as: 'section' })`
         `}
     }
 
-    ${PacientBannerStyles.Wrapper}{
+    ${PacientBannerStyles.Wrapper} {
       ${media.lessThan('medium')`
           margin: 0 calc(-${theme.grid.gutter} / 4);
-        `}
-    }}
+      `}
+    }
   `}
 `;

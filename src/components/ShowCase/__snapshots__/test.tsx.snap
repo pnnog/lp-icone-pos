@@ -14,7 +14,7 @@ exports[`<ShowCase /> should render ShowCase 1`] = `
   margin-bottom: 4.8rem;
 }
 
-.c1 >p {
+.c1 > p {
   color: #334155;
   font-size: 1.6rem;
   font-weight: 400;

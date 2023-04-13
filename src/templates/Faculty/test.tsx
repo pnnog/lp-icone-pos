@@ -1,7 +1,7 @@
 import '../../../.jest/match-media-mock';
 import { screen } from '@testing-library/react';
 
-import Faculty from '.';
+import FacultyTemplate from '.';
 import { mockCordinators, mockTeachers } from './mock';
 import { renderWithTheme } from 'utils/tests/helper';
 
@@ -14,10 +14,10 @@ jest.mock('templates/Base', () => {
   };
 });
 
-describe('<Faculty />', () => {
+describe('<FacultyTemplate />', () => {
   it('should render Teachers', () => {
     renderWithTheme(
-      <Faculty teachers={mockTeachers} coordinators={mockCordinators} />
+      <FacultyTemplate teachers={mockTeachers} coordinators={mockCordinators} />
     );
 
     expect(screen.getByTestId('Mock Base')).toBeInTheDocument();

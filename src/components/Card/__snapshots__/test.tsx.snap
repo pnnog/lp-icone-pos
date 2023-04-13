@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> does not should render modal if no modalText is present 1`] = `
+.c0 {
+  width: 100%;
+  height: 100%;
+}
+
+.c1 {
+  border-radius: 0.4rem;
+  box-shadow: 1.8px 3.6px 1.8px rgba(0,0,0,0.25);
+  position: relative;
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.c2 {
+  width: 100%;
+  height: 35rem;
+  border-radius: inherit;
+  background: #f6f7f8;
+  background-image: linear-gradient( to right,#f6f7f8 0%,#edeef1 20%,#f6f7f8 40%,#f6f7f8 100% );
+  background-size: 80rem 14rem;
+  -webkit-animation: placeholderShimmer 1s linear infinite forwards;
+  animation: placeholderShimmer 1s linear infinite forwards;
+}
+
+.c3 {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.c4 {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 85%;
+}
+
+.c6 {
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  color: #F8FAFC;
+  text-shadow: 0 0.3rem 0.6rem rgba(0,0,0,0.4);
+}
+
+.c7 {
+  position: relative;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  -webkit-backdrop-filter: blur(1.5rem);
+  backdrop-filter: blur(1.5rem);
+  background: rgba(2,132,199,0.7);
+  box-shadow: 0 0 1rem 01rem rgba(0,0,0,0.35);
+  -webkit-backdrop-filter: blur(1.5rem);
+}
+
+.c7 span {
+  color: #F8FAFC;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 40;
+  overflow: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1.6rem;
+  padding-right: 2.4rem;
+  -webkit-backdrop-filter: blur(1.5rem);
+  backdrop-filter: blur(1.5rem);
+  -webkit-backdrop-filter: blur(1.5rem);
+  background: rgba(0,0,0,0.7);
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: #F8FAFC;
+  text-align: right;
+}
+
+.c9 svg {
+  margin: 0.8rem;
+}
+
+.c11 {
+  width: min(100%,90rem);
+  margin-top: 2.4rem;
+}
+
+.c11 .c5 {
+  text-shadow: none;
+  position: relative;
+  margin-bottom: calc(2.4rem*2);
+}
+
+.c11 .c5::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.6rem;
+  bottom: -2rem;
+  left: 0;
+  background-color: #0284C7;
+}
+
+.c12 {
+  font-size: 1.6rem;
+  color: #F8FAFC;
+  padding-bottom: 2.4rem;
+  text-align: justify;
+}
+
+.c10 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+@media (min-width:768px) {
+  .c2 {
+    height: 40rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c6 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c7 {
+    padding: 1.6rem 3.2rem;
+  }
+
+  .c7 span {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c8 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: rgba(12,74,110,.8);
+  }
+}
+
+@media (min-width:1170px) {
+  .c9 svg {
+    margin: 2.4rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c11 {
+    margin-top: 5.6rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c11 .c5 {
+    margin-bottom: 5.6rem;
+  }
+
+  .c11 .c5::after {
+    background-color: #F8FAFC;
+  }
+}
+
+@media (min-width:768px) {
+  .c12 {
+    font-size: 1.8rem;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      aria-label="open modal"
+      class="c1"
+      role="button"
+    >
+      <figure
+        class="c2"
+      >
+        <img
+          alt="title test"
+          class="c3"
+          src="teste img"
+        />
+      </figure>
+      <div
+        class="c4"
+      >
+        <h2
+          class="c5 c6"
+        >
+          title test
+        </h2>
+        <div
+          class="c7"
+        >
+          <span>
+             Saiba mais
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      aria-hidden="true"
+      aria-label="modal"
+      class="c8"
+    >
+      <div
+        aria-label="close modal"
+        class="c9"
+        role="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="c10"
+          fill="currentColor"
+          focusable="false"
+          height="30"
+          viewBox="0 0 24 24"
+          width="30"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+          />
+        </svg>
+      </div>
+      <div
+        class="c11"
+      >
+        <h2
+          class="c5 c6"
+        >
+          title test
+        </h2>
+        <p
+          class="c12"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
