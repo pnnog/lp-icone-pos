@@ -30,7 +30,7 @@
 
   // Explorer
   "explorer.compactFolders": false,
-  "explorer.confirmDelete": true,
+  "explorer.confirmDelete": false,
 
   // Editor and breadcrumbs
   "breadcrumbs.enabled": false,
