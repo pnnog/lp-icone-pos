@@ -35,17 +35,16 @@ exports[`<BannerSlider /> should render BannerSlider with reminder data 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 0.4rem;
-  border: 0;
   padding: 0.8rem 3.2rem;
   height: 3rem;
-  cursor: pointer;
+  background: #0284C7;
+  color: #F8FAFC;
+  border-radius: 0.4rem;
   font-size: 1.2rem;
   font-weight: 500;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background: #0284C7;
-  color: #F8FAFC;
+  cursor: pointer;
   width: 100%;
 }
 
@@ -485,14 +484,9 @@ exports[`<BannerSlider /> should render BannerSlider with reminder data 1`] = `
                   </p>
                   <a
                     class="c11"
-                    href="https://www.whatsapp.com.br"
-                    target="_blank"
+                    href=" http://www.whatsapp.com"
                   >
-                    <span>
-                       
-                      Inscreva-se
-                       
-                    </span>
+                    Inscreva-se
                   </a>
                 </div>
               </div>

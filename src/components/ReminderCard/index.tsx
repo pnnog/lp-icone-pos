@@ -19,9 +19,7 @@ const ReminderCard = ({ date, title, teacher }: ReminderCardProps) => (
     </S.DateWrapper>
     <S.Title>{title}</S.Title>
     <S.Teacher>{teacher}</S.Teacher>
-    <ButtonLink href="https://www.whatsapp.com.br" fullWidth>
-      Inscreva-se
-    </ButtonLink>
+    <ButtonLink fullWidth>Inscreva-se</ButtonLink>
   </S.Wrapper>
 );
 

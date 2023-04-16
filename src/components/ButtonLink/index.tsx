@@ -1,21 +1,21 @@
-import { AnchorHTMLAttributes } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { AnchorHTMLAttributes, forwardRef } from 'react';
 import * as S from './styles';
 
-type ButtonLinkTypes = AnchorHTMLAttributes<HTMLAnchorElement>;
+export type AnchorTypes = AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export type ButtonLinkProps = {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   fullWidth?: boolean;
-} & ButtonLinkTypes;
+} & AnchorTypes;
 
-const ButtonLink = ({
-  children,
-  fullWidth = false,
-  ...props
-}: ButtonLinkProps) => (
-  <S.Wrapper fullWidth={fullWidth} target="_blank" {...props}>
-    {!!children && <span> {children} </span>}
+const ButtonLink: React.ForwardRefRenderFunction<S.WrapperProps, ButtonLinkProps> = (
+  { children, fullWidth = false, href = ' http://www.whatsapp.com', target },
+  ref
+) => (
+  <S.Wrapper fullWidth={fullWidth} href={href} target={target}>
+    {children}
   </S.Wrapper>
 );
 
-export default ButtonLink;
+export default React.forwardRef(ButtonLink);

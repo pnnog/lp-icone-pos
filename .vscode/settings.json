@@ -33,11 +33,11 @@
   "explorer.confirmDelete": true,
 
   // Editor and breadcrumbs
-  "breadcrumbs.enabled": true,
+  "breadcrumbs.enabled": false,
   "editor.renderControlCharacters": true,
   "editor.tabSize": 2,
   "editor.renderLineHighlight": "gutter",
-  "editor.rulers": [79, 120],
+  "editor.rulers": [120],
   "editor.minimap.enabled": false,
   "editor.fontSize": 15,
   "editor.detectIndentation": true,

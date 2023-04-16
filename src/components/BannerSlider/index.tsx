@@ -1,7 +1,4 @@
-import {
-  ArrowDownward as NextArrowIcon,
-  ArrowUpward as PrevArrowIcon
-} from '@styled-icons/material-outlined';
+import { ArrowDownward as NextArrowIcon, ArrowUpward as PrevArrowIcon } from '@styled-icons/material-outlined';
 
 import Banner, { BannerProps } from 'components/Banner';
 import Slider, { SliderSettings } from 'components/Slider';

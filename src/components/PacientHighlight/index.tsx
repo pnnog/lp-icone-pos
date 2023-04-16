@@ -1,5 +1,6 @@
 import ButtonLink from 'components/ButtonLink';
 import * as S from './styles';
+import Link from 'next/link';
 
 export type PacientHighlightProps = Record<'title' | 'float' | 'img', string>;
 
@@ -10,7 +11,9 @@ const PacientHighlight = ({ title, float, img }: PacientHighlightProps) => (
     </S.FloatImageWrapper>
     <S.Content>
       <S.Title> {title} </S.Title>
-      <ButtonLink> Ver mais</ButtonLink>
+      <Link href="/paciente" passHref legacyBehavior>
+        <ButtonLink>Ver mais</ButtonLink>
+      </Link>
     </S.Content>
   </S.Wrapper>
 );

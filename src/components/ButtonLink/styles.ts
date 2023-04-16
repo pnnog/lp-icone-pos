@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { ButtonLinkProps } from '.';
+import { AnchorTypes, ButtonLinkProps } from '.';
 import media from 'styled-media-query';
 
 const wrapperModifiers = {
@@ -8,21 +8,25 @@ const wrapperModifiers = {
   `
 };
 
-export const Wrapper = styled.a<ButtonLinkProps>`
+export type WrapperProps = Pick<ButtonLinkProps, 'fullWidth'>;
+
+export const Wrapper = styled.a<WrapperProps>`
   ${({ theme, fullWidth }) => css`
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: ${theme.border.radius};
-    border: 0;
     padding: ${theme.spacings.xxsmall} ${theme.spacings.medium};
     height: 3rem;
-    cursor: pointer;
+
+    background: ${theme.colors.secondary};
+    color: ${theme.colors.white};
+    border-radius: ${theme.border.radius};
+
     font-size: ${theme.font.sizes.xsmall};
     font-weight: ${theme.font.medium};
     text-decoration: none;
-    background: ${theme.colors.secondary};
-    color: ${theme.colors.white};
+
+    cursor: pointer;
 
     ${media.greaterThan('medium')`
         font-size: ${theme.font.sizes.medium};

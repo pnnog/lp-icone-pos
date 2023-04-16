@@ -15,8 +15,12 @@ describe('<ButtonLink />', () => {
   });
 
   it('should render ButtonLink fullWidth', () => {
-    renderWithTheme(<ButtonLink fullWidth {...props} />);
-    const element = screen.getByRole('link');
+    renderWithTheme(
+      <ButtonLink fullWidth {...props}>
+        Ver mais
+      </ButtonLink>
+    );
+    const element = screen.getByRole('link', { name: /Ver mais/i });
     expect(element).toHaveStyle({ width: '100%' });
   });
 });
