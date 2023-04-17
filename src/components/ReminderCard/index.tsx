@@ -3,8 +3,8 @@ import ButtonLink from 'components/ButtonLink';
 import * as S from './styles';
 
 export type ReminderCardProps = {
-  date: string;
-  title: string;
+  date?: string;
+  title?: string;
   teacher?: string;
 };
 

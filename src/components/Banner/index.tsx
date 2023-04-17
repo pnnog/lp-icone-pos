@@ -6,7 +6,7 @@ export type BannerProps = {
   reminder?: boolean;
 } & ReminderCardProps;
 
-const Banner = ({ img, reminder, ...props }: BannerProps) => (
+const Banner = ({ img, reminder = false, ...props }: BannerProps) => (
   <S.Wrapper>
     <S.ImageWrapper>
       <S.Image src={img} alt={props.title} />

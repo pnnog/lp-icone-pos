@@ -5,12 +5,12 @@ import ShowCase, { ShowCaseProps } from '.';
 import { renderWithTheme } from 'utils/tests/helper';
 
 import mockNews from 'components/NewsSlider/mock';
-import mockPacientHighlight from 'components/PacientHighlight/mock';
+import mockHighlight from 'components/Highlight/mock';
 
 const props: ShowCaseProps = {
   heading: 'title test',
   news: mockNews,
-  pacientHighlight: mockPacientHighlight
+  highlight: mockHighlight
 };
 
 jest.mock('components/Heading', () => {
@@ -40,23 +40,21 @@ jest.mock('components/NewsSlider', () => {
   };
 });
 
-jest.mock('components/PacientHighlight', () => {
+jest.mock('components/Highlight', () => {
   return {
     __esModule: true,
     default: function Mock() {
-      return <div data-testid="Mock Pacient Highlight"></div>;
+      return <div data-testid="Mock Highlight"></div>;
     }
   };
 });
 
 describe('<ShowCase />', () => {
   it('should render ShowCase', () => {
-    const { container } = renderWithTheme(
-      <ShowCase {...props}>children test</ShowCase>
-    );
+    const { container } = renderWithTheme(<ShowCase {...props}>children test</ShowCase>);
     expect(screen.getByTestId('Mock Heading')).toBeInTheDocument();
     expect(screen.getByTestId('Mock News Slider')).toBeInTheDocument();
-    expect(screen.getByTestId('Mock Pacient Highlight')).toBeInTheDocument();
+    expect(screen.getByTestId('Mock Highlight')).toBeInTheDocument();
     expect(screen.getByText(/children test/i)).toBeInTheDocument();
 
     expect(container).toMatchSnapshot();

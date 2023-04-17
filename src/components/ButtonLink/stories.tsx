@@ -14,6 +14,4 @@ export default {
   }
 } as Meta;
 
-export const Normal: Story<ButtonLinkProps> = (args) => (
-  <ButtonLink {...args}>Ver mais</ButtonLink>
-);
+export const Normal: Story<ButtonLinkProps> = (args) => <ButtonLink {...args}>Ver mais</ButtonLink>;

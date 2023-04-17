@@ -1,6 +1,5 @@
 import Base from 'templates/Base';
 import * as S from './styles';
-import Container from 'components/Container';
 import Heading from 'components/Heading';
 import Grid from 'components/Grid';
 import Card, { CardProps } from 'components/Card';

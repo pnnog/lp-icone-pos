@@ -1,16 +1,19 @@
-import mockBanners from 'components/BannerSlider/mock';
-import { mockCourseCards } from 'components/Card/mock';
-import mockPacientHighlights from 'components/PacientHighlight/mock';
-import mockNews from 'components/NewsSlider/mock';
-import HomeTemplate from 'templates/Home';
+import { homeData } from 'data/data';
 
-export default function Index() {
-  return (
-    <HomeTemplate
-      banners={mockBanners}
-      courses={mockCourseCards}
-      pacientHighlight={mockPacientHighlights}
-      news={mockNews}
-    />
-  );
+import { GetStaticProps } from 'next';
+import HomeTemplate, { HomeTemplateProps } from 'templates/Home';
+
+export default function Index(props: HomeTemplateProps) {
+  return <HomeTemplate {...props} />;
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      banners: homeData.banners,
+      courses: homeData.courses,
+      pacientHighlight: homeData.highlight,
+      news: homeData.news
+    }
+  };
+};

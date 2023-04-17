@@ -2,16 +2,13 @@ import '../../../.jest/match-media-mock';
 
 import HomeTemplate, { HomeTemplateProps } from '.';
 import { renderWithTheme } from 'utils/tests/helper';
-import mockBanners from 'components/BannerSlider/mock';
-import { mockCourseCards } from 'components/Card/mock';
-import mockNews from 'components/NewsSlider/mock';
-import mockPacientHighlight from 'components/PacientHighlight/mock';
+import { homeData } from 'data/data';
 
 const props: HomeTemplateProps = {
-  banners: mockBanners,
-  courses: mockCourseCards,
-  pacientHighlight: mockPacientHighlight,
-  news: mockNews
+  courses: homeData.courses,
+  pacientHighlight: homeData.highlight,
+  news: homeData.news,
+  banners: homeData.banners
 };
 
 describe('<HomeTemplate />', () => {

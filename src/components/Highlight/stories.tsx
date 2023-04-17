@@ -1,17 +1,15 @@
 import { Meta, Story } from '@storybook/react';
 
-import PacientHighlight, { PacientHighlightProps } from '.';
+import Highlight, { HighlightProps } from '.';
 import MockBannerPacient from './mock';
 
 export default {
   title: 'PacientBanner',
-  component: PacientHighlight,
+  component: Highlight,
   args: { ...MockBannerPacient },
   parameters: {
     layout: 'fullscreen'
   }
 } as Meta;
 
-export const Basic: Story<PacientHighlightProps> = (args) => (
-  <PacientHighlight {...args} />
-);
+export const Basic: Story<HighlightProps> = (args) => <Highlight {...args} />;

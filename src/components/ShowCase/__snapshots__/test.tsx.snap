@@ -54,7 +54,7 @@ exports[`<ShowCase /> should render ShowCase 1`] = `
       data-testid="Mock News Slider"
     />
     <div
-      data-testid="Mock Pacient Highlight"
+      data-testid="Mock Highlight"
     />
   </section>
 </div>

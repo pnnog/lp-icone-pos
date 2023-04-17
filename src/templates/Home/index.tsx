@@ -3,7 +3,7 @@ import Base from 'templates/Base';
 import BannerSlider from 'components/BannerSlider';
 import ShowCase from 'components/ShowCase';
 import { BannerProps } from 'components/Banner';
-import { PacientHighlightProps } from 'components/PacientHighlight';
+import { HighlightProps } from 'components/Highlight';
 import { NewsCardProps } from 'components/NewsCard';
 
 import * as S from './styles';
@@ -16,21 +16,15 @@ import Grid from 'components/Grid';
 export type HomeTemplateProps = {
   banners: BannerProps[];
   courses: CardProps[];
-  pacientHighlight: PacientHighlightProps;
+  pacientHighlight: HighlightProps;
   news: NewsCardProps[];
 };
 
-const HomeTemplate = ({
-  banners,
-  courses,
-  pacientHighlight,
-  news
-}: HomeTemplateProps) => (
+const HomeTemplate = ({ banners, courses, pacientHighlight, news }: HomeTemplateProps) => (
   <Base>
     <S.SectionBanner>
       <BannerSlider items={banners} />
     </S.SectionBanner>
-
     <S.SectionCourses>
       <Heading> Cursos </Heading>
 
@@ -44,17 +38,12 @@ const HomeTemplate = ({
     </S.SectionCourses>
 
     <ShowCase heading="A Escola">
-      Com a proposta de inovação na área de educação, a Ícone Pós-graduação
-      surge trazendo cursos de especialização e atualização em Implantodontia.
-      Com um corpo docente referência em implantodontia na Bahia, nossa equipe
-      está empenhada em promover uma experiência única de aprendizado! Vamos
-      juntos!
+      Com a proposta de inovação na área de educação, a Ícone Pós-graduação surge trazendo cursos de especialização e
+      atualização em Implantodontia. Com um corpo docente referência em implantodontia na Bahia, nossa equipe está
+      empenhada em promover uma experiência única de aprendizado! Vamos juntos!
     </ShowCase>
 
-    <ShowCase
-      heading="Central do paciente"
-      pacientHighlight={pacientHighlight}
-    />
+    <ShowCase heading="Central do paciente" highlight={pacientHighlight} />
     <ShowCase heading="Notícias" news={news} />
   </Base>
 );

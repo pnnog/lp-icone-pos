@@ -1,10 +1,10 @@
 import CourseTemplate, { CourseTemplateProps } from 'templates/Course';
-import data from 'templates/Course/data';
+import { courseData } from 'data/data';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   //gera um array com as rotas possíveis
-  const paths = data.map(({ slug }) => ({ params: { slug: slug } }));
+  const paths = courseData.map(({ slug }) => ({ params: { slug: slug } }));
 
   //manda as rotas para o getStaticProps  dentro de params
   return { paths, fallback: false };
@@ -12,7 +12,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   //busca o dado específico na api utilizando o slug dentro de parms como referência
-  const course = data.find((item) => item.slug === params?.slug);
+  const course = courseData.find((item) => item.slug === params?.slug);
 
   return {
     //retorna o objeto com os dados para a página

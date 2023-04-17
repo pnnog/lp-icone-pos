@@ -52,8 +52,7 @@ export const ImageBox = styled.figure`
     width: 100%;
     height: 25rem;
     align-self: end;
-    padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall} 0
-      ${theme.spacings.xsmall};
+    padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall} 0 ${theme.spacings.xsmall};
 
     ${media.greaterThan('medium')`
       grid-area: image;

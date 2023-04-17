@@ -1,7 +1,4 @@
-import {
-  ArrowDownward as NextArrowIcon,
-  ArrowUpward as PrevArrowIcon
-} from '@styled-icons/material-outlined';
+import { ArrowDownward as NextArrowIcon, ArrowUpward as PrevArrowIcon } from '@styled-icons/material-outlined';
 
 import SlickButtonFix from 'utils/slick-button-fix';
 import NewsCard, { NewsCardProps } from 'components/NewsCard';
