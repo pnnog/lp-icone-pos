@@ -62,14 +62,20 @@ exports[`<Menu /> should render full menu 1`] = `
   font-weight: 700;
 }
 
-.c4 a:hover::after {
+.c4 a::after {
   content: '';
   position: absolute;
   bottom: -0.5rem;
+  left: 0;
+  width: 0;
   height: 0.3rem;
   background-color: #F0632B;
-  -webkit-animation: hoverAnimation 0.2s forwards;
-  animation: hoverAnimation 0.2s forwards;
+  -webkit-transition: width 0.4s ease-out;
+  transition: width 0.4s ease-out;
+}
+
+.c4 a:hover::after {
+  width: 100%;
 }
 
 .c8 {
@@ -238,11 +244,6 @@ exports[`<Menu /> should render full menu 1`] = `
          Home
       </a>
       <a
-        href="/cursos"
-      >
-         Cursos
-      </a>
-      <a
         href="/corpo-docente"
       >
          Corpo docente
@@ -301,11 +302,6 @@ exports[`<Menu /> should render full menu 1`] = `
         href="/"
       >
          Home
-      </a>
-      <a
-        href="/cursos"
-      >
-         Cursos
       </a>
       <a
         href="/corpo-docente"

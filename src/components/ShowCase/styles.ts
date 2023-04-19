@@ -4,7 +4,6 @@ import media from 'styled-media-query';
 import Container from 'components/Container';
 import * as HeadingStyles from 'components/Heading/styles';
 import * as HighlightStyles from 'components/Highlight/styles';
-import * as NewsCardSlider from 'components/NewsSlider/styles';
 
 export const Wrapper = styled(Container).attrs({ as: 'section' })`
   ${({ theme }) => css`

@@ -8,9 +8,7 @@ export type BannerProps = {
 
 const Banner = ({ img, reminder = false, ...props }: BannerProps) => (
   <S.Wrapper>
-    <S.ImageWrapper>
-      <S.Image src={img} alt={props.title} />
-    </S.ImageWrapper>
+    <S.ImageWrapper img={img} aria-label={props.title} role="img" />
     {!!reminder && <ReminderCard {...props} />}
   </S.Wrapper>
 );

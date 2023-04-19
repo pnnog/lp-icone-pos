@@ -1,28 +1,20 @@
 import * as S from './styles';
 
 export type CarrerProps = {
-  img?: string;
+  img: string;
   name: string;
-  role?: string;
-  roles: string[];
-  toRight?: boolean;
+  role: string;
+  description: string;
 };
 
-const Carrer = ({ img, name, role, roles, toRight = false }: CarrerProps) => (
-  <S.Wrapper toRight={toRight}>
-    <S.ImageBox>
-      <img src={img} alt={name} />
-    </S.ImageBox>
-
-    <S.Description>
+const Carrer = ({ img, name, role, description }: CarrerProps) => (
+  <S.Wrapper>
+    <S.ImageBox img={img} role="img" aria-label={name} />
+    <S.Content>
       <S.Name> {name}</S.Name>
       <S.Role> {role}</S.Role>
-      <ul>
-        {roles.map((item, index) => (
-          <li key={`item ${index}`}>{item}</li>
-        ))}
-      </ul>
-    </S.Description>
+      <S.Description>{description} </S.Description>
+    </S.Content>
   </S.Wrapper>
 );
 

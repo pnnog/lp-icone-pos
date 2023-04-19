@@ -3,20 +3,22 @@ import media from 'styled-media-query';
 
 type WrapperProps = { src: string };
 export const Wrapper = styled.section<WrapperProps>`
-  ${({ src }) => css`
+  ${({ src, theme }) => css`
     background-image: url(${src});
     background-size: cover;
-    height: 25rem;
     position: relative;
+
+    height: 25rem;
+    border-radius: ${theme.border.radius};
 
     display: grid;
     grid-template-areas: 'float content';
     grid-template-columns: 1.5fr 2fr;
 
     ${media.greaterThan('medium')`
-    height: 35rem;
-    grid-template-areas: ' content float';
-    grid-template-columns: 3fr 1fr;
+      height: 45rem;
+      grid-template-areas: ' content float';
+      grid-template-columns: 3fr 1fr;
     `}
 
     &::after {
@@ -25,6 +27,7 @@ export const Wrapper = styled.section<WrapperProps>`
       height: 100%;
       position: absolute;
       background-color: rgba(0, 0, 0, 0.8);
+      border-radius: ${theme.border.radius};
     }
   `}
 `;

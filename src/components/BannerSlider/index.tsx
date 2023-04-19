@@ -1,4 +1,7 @@
-import { ArrowDownward as NextArrowIcon, ArrowUpward as PrevArrowIcon } from '@styled-icons/material-outlined';
+import {
+  ArrowDownward as NextArrowIcon,
+  ArrowUpward as PrevArrowIcon
+} from '@styled-icons/material-outlined';
 
 import Banner, { BannerProps } from 'components/Banner';
 import Slider, { SliderSettings } from 'components/Slider';
@@ -42,8 +45,8 @@ export type BannerSliderProps = {
 const BannerSlider = ({ items }: BannerSliderProps) => (
   <S.Wrapper>
     <Slider settings={settings}>
-      {items.map((item) => (
-        <Banner key={item.title} {...item} />
+      {items.map((item, index) => (
+        <Banner key={index} {...item} />
       ))}
     </Slider>
   </S.Wrapper>

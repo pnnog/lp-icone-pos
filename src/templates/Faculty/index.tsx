@@ -2,7 +2,6 @@ import Base from 'templates/Base';
 import * as S from './styles';
 import Carrer, { CarrerProps } from 'components/Carrer';
 import Container from 'components/Container';
-import ShowCase from 'components/ShowCase';
 import Heading from 'components/Heading';
 
 export type FacultyTemplateProps = {
@@ -12,26 +11,30 @@ export type FacultyTemplateProps = {
 const FacultyTemplate = ({ coordinators, teachers }: FacultyTemplateProps) => {
   return (
     <Base>
-      <S.Introduction>
-        <ShowCase heading="Corpo docente">
-          Convocamos um corpo docente referência em Implantodontia na Bahia.Nossa equipe está empenhada em promover uma
-          experiência única de aprendizado. Confira!
-        </ShowCase>
-      </S.Introduction>
+      <S.IntroductionSection>
+        <Heading>Corpo docente</Heading>
+        <p>
+          Convocamos um corpo docente referência em Implantodontia na
+          Bahia.Nossa equipe está empenhada em promover uma experiência única de
+          aprendizado. <strong>Confira!</strong>
+        </p>
+      </S.IntroductionSection>
 
-      <Container>
-        <S.Content>
-          <Heading> Professores Coordenadores </Heading>
+      <S.CoordenatorsSection>
+        <Container>
+          <Heading>Professores Coordenadores</Heading>
           {coordinators.map((coordinator) => (
             <Carrer key={coordinator.name} {...coordinator} />
           ))}
+        </Container>
+      </S.CoordenatorsSection>
 
-          <Heading> Professores </Heading>
-          {teachers.map((teacher) => (
-            <Carrer key={teacher.name} {...teacher} />
-          ))}
-        </S.Content>
-      </Container>
+      <S.TeachersSection>
+        <Heading> Professores </Heading>
+        {teachers.map((teacher) => (
+          <Carrer key={teacher.name} {...teacher} />
+        ))}
+      </S.TeachersSection>
     </Base>
   );
 };

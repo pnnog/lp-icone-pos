@@ -1,20 +1,18 @@
 import { Meta, Story } from '@storybook/react';
 import NewsCard, { NewsCardProps } from '.';
 
+import mock from './mock';
+
 export default {
   title: 'NewsCard',
   component: NewsCard,
   args: {
-    href: '/',
-    img: 'https://source.unsplash.com/user/willianjusten/400x400',
-    date: '1 fev 2019',
-    title:
-      'Aluna Mirella Martins Costa recebe prêmio de honra ao mérito científico.'
+    ...mock
   },
   parameters: {
     layout: 'fullscreen',
     backgrounds: {
-      default: 'white'
+      default: 'icone-white'
     },
     viewport: {
       defaultViewport: 'mobile1'

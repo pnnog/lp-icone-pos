@@ -1,153 +1,93 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
-import { CarrerProps } from '.';
 
-type WrapperProps = Pick<CarrerProps, 'toRight'>;
+export const Wrapper = styled.article`
+  ${({ theme }) => css`
+    display: grid;
+    grid-template-columns: 1fr;
 
-const wrapperModifiers = {
-  toRight: () => css`
-    grid-template-areas: 'description image';
-
-    ${ImageBox} {
-      text-align: right;
-
-      ::after {
-        left: auto;
-        right: 0;
-        background: linear-gradient(
-          90deg,
-          rgba(233, 245, 247, 1) 18%,
-          rgba(63, 147, 186, 1) 61%,
-          rgba(12, 74, 110, 1) 100%
-        );
-      }
-    }
-  `,
-  toLeft: () => css`
-    grid-template-areas: 'image description';
-  `
-};
-
-export const Wrapper = styled.div<WrapperProps>`
-  ${({ theme, toRight }) => css`
-    width: 100%;
-    height: 100%;
-
-    background: none;
+    background-color: #ffffff;
+    box-shadow: 0 0 0.5rem rgb(0, 0, 0, 0.3);
     border-radius: ${theme.border.radius};
 
-    display: grid;
+    max-width: 40rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 
     ${media.greaterThan('medium')`
-      ${!!toRight && wrapperModifiers.toRight()};
-      ${!toRight && wrapperModifiers.toLeft()};
-     
-    `}
+      grid-template-columns: 1fr 2fr;
+      grid-column-gap: ${theme.spacings.small};
+      max-width: 100%;
+
+    `};
   `}
 `;
 
-export const ImageBox = styled.figure`
-  ${({ theme }) => css`
+type ImageBox = { img: string };
+
+export const ImageBox = styled.figure<ImageBox>`
+  ${({ theme, img }) => css`
+    background: #ffffff url(${img}) no-repeat;
+    background-size: cover;
+
     position: relative;
+    min-height: 30rem;
+    height: 100%;
     width: 100%;
-    height: 25rem;
-    align-self: end;
-    padding: ${theme.spacings.xsmall} ${theme.spacings.xsmall} 0 ${theme.spacings.xsmall};
 
-    ${media.greaterThan('medium')`
-      grid-area: image;
-      height: 30rem;
-  `} img {
-      max-width: 25rem;
-      height: 100%;
-    }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    border-radius: ${theme.border.radius};
 
-    ::after {
+    :after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 1rem;
-      width: 95%;
-      background: linear-gradient(
-        90deg,
-        rgba(12, 74, 110, 1) 18%,
-        rgba(63, 147, 186, 1) 61%,
-        rgba(233, 245, 247, 1) 100%
-      );
+      width: 100%;
+      height: 0.6rem;
+      background-color: ${theme.colors.orange};
+      z-index: calc(${theme.layers.base});
     }
 
     ${media.greaterThan('medium')`
-      ::after{
-        height: 1.2rem;
-        
-        
+      :after{
+        height: .8em;
       }
     `}
   `}
 `;
 
-export const Name = styled.h3`
+export const Content = styled.div`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.large};
-    font-weight: ${theme.font.extraBold};
-
+    padding: ${theme.spacings.xsmall};
     ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xlarge};
-      margin-bottom: ${theme.spacings.xxsmall};
-
-    `}
+      padding: ${theme.spacings.medium};
+      
+    `};
+  `}
+`;
+export const Name = styled.h2`
+  ${({ theme }) => css`
+    color: ${theme.colors.primary};
+    font-size: ${theme.font.sizes.xlarge};
+    font-weight: ${theme.font.extraBold};
+    margin-bottom: ${theme.spacings.xxsmall};
   `}
 `;
 export const Role = styled.p`
   ${({ theme }) => css`
-    color: ${theme.colors.gray};
-    font-size: ${theme.font.sizes.xsmall};
-    font-weight: ${theme.font.regular};
-    margin-bottom: ${theme.spacings.small};
-
-    ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.small};
-    margin-bottom: ${theme.spacings.medium};
-
-    `}
+    font-size: ${theme.font.sizes.small};
+    font-weight: ${theme.font.medium};
+    margin-bottom: ${theme.spacings.xsmall};
+    color: ${theme.colors.lightGray};
   `}
 `;
-
-export const Description = styled.div`
+export const Description = styled.p`
   ${({ theme }) => css`
-    box-shadow: 0 1rem 3rem 0 rgba(143, 177, 200, 0.22);
-    background-color: ${theme.colors.primary};
-    padding: ${theme.spacings.small};
-    border-radius: 0 0 ${theme.border.radius} ${theme.border.radius};
-
-    h3,
-    p,
-    li {
-      text-align: justify;
-      color: ${theme.colors.white};
-    }
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: ${theme.spacings.xsmall};
-      list-style: none;
-    }
-
-    li {
-      font-size: ${theme.font.sizes.small};
-      font-weight: ${theme.font.regular};
-      line-height: ${theme.font.sizes.xxlarge};
-    }
-
-    ${media.greaterThan('medium')`
-      grid-area: description;
-      border-radius: ${theme.border.radius};
-      li{
-        font-size: ${theme.font.sizes.medium};
-      }
-    
-    `}
+    font-size: ${theme.font.sizes.medium};
+    font-weight: ${theme.font.medium};
+    text-align: justify;
+    color: ${theme.colors.lightGray};
   `}
 `;

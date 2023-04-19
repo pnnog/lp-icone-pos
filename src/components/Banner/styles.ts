@@ -1,19 +1,25 @@
 import styled from 'styled-components';
+import { css } from 'styled-components';
 import media from 'styled-media-query';
 
 export const Wrapper = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
 `;
-export const ImageWrapper = styled.figure`
-  height: 44rem;
 
-  ${media.greaterThan('medium')`
-  height: 49.5rem;
+type imageBoxProps = {
+  img: string;
+};
+
+export const ImageWrapper = styled.figure<imageBoxProps>`
+  ${({ theme, img }) => css`
+    background: #ffffff url(${img}) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 44rem;
+    border-radius: ${theme.border.radius};
+
+    ${media.greaterThan('medium')`
+      height: 58rem;
+  `};
   `}
-`;
-export const Image = styled.img`
-  width: 100%;
-  height: 100%;
 `;

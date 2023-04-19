@@ -37,7 +37,7 @@
   "editor.renderControlCharacters": true,
   "editor.tabSize": 2,
   "editor.renderLineHighlight": "gutter",
-  "editor.rulers": [120],
+  "editor.rulers": [75],
   "editor.minimap.enabled": false,
   "editor.fontSize": 15,
   "editor.detectIndentation": true,

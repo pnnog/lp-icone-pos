@@ -61,7 +61,6 @@ const Footer = () => (
         </Heading>
         <nav>
           <Link href="/"> Home </Link>
-          <Link href="/cursos"> Cursos </Link>
           <Link href="/corpo-docente"> Corpo docente </Link>
           <Link href="/paciente"> Paciente </Link>
         </nav>

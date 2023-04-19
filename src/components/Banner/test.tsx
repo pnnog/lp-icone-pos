@@ -8,7 +8,9 @@ describe('<Banner />', () => {
   it('should render Banner', () => {
     renderWithTheme(<Banner {...MockBanner} />);
 
-    expect(screen.getByRole('img', { name: MockBanner.title })).toHaveAttribute('src', MockBanner.img);
+    expect(
+      screen.getByRole('img', { name: MockBanner.title })
+    ).toBeInTheDocument();
   });
 
   it('should render reminder card when date is passed', () => {

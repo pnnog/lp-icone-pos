@@ -51,7 +51,9 @@ jest.mock('components/Highlight', () => {
 
 describe('<ShowCase />', () => {
   it('should render ShowCase', () => {
-    const { container } = renderWithTheme(<ShowCase {...props}>children test</ShowCase>);
+    const { container } = renderWithTheme(
+      <ShowCase {...props}>children test</ShowCase>
+    );
     expect(screen.getByTestId('Mock Heading')).toBeInTheDocument();
     expect(screen.getByTestId('Mock News Slider')).toBeInTheDocument();
     expect(screen.getByTestId('Mock Highlight')).toBeInTheDocument();

@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
+import * as BannerStyles from 'components/Banner/styles';
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    margin: -0.1rem;
     .slick-dots {
       display: flex !important;
       justify-content: center;
@@ -45,6 +45,7 @@ export const Wrapper = styled.div`
 
     .slick-slide {
       visibility: hidden;
+      border: none !important;
 
       &.slick-active.slick-current {
         visibility: visible;
@@ -84,12 +85,31 @@ export const Wrapper = styled.div`
         top:50%;
         margin:0;
 
-
         li{
           margin-top:${theme.spacings.xxsmall};
         }
 
       }
+    `}
+
+    ${media.greaterThan('large')`
+      ${BannerStyles.Wrapper}{
+        max-width: 104rem;
+        width:100%;
+        margin:auto;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0.4rem 0.5rem 0px;
+      }
+    `}
+
+
+    ${media.greaterThan('huge')`
+      .slick-dots {
+        right: 15rem;
+      }
+      
+      .slick-next, .slick-prev {
+        right: 15rem; 
+      } 
     `}
   `}
 `;

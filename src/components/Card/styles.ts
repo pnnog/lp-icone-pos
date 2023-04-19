@@ -21,11 +21,11 @@ export const Card = styled.div`
 
 export const ImageBox = styled.figure`
   width: 100%;
-  height: 35rem;
+  height: 25rem;
   border-radius: inherit;
 
   ${media.greaterThan('medium')`
-    height: 40rem;
+    height: 30rem;
   `}
 
   background: #f6f7f8;

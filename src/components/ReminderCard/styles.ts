@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     position: absolute;
     top: 15%;
-    right: 5%;
+    left: 5%;
     background-color: ${theme.colors.white};
     width: 20rem;
     padding: ${theme.spacings.xsmall} ${theme.spacings.xxsmall};
@@ -13,10 +13,11 @@ export const Wrapper = styled.div`
     overflow-x: hidden;
 
     ${media.greaterThan('medium')`
-      width: 32rem;
-      padding: ${theme.spacings.medium} ${theme.spacings.xsmall};
-      left: 5%;
+      width: 35rem;
+      padding: ${theme.spacings.medium} ${theme.spacings.small};
+    `}
 
+    ${media.greaterThan('large')`
     `}
   `}
 `;

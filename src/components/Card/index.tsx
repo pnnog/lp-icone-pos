@@ -3,6 +3,7 @@ import * as S from './styles';
 import { Close } from '@styled-icons/material-outlined';
 
 export type CardProps = {
+  slug: string;
   img: string;
   title: string;
   modal?: string;
@@ -18,7 +19,11 @@ const Card = ({ img, title, modal }: CardProps) => {
 
   return (
     <S.Wrapper>
-      <S.Card role="button" aria-label="open modal" onClick={() => modalVerifiy(modal)}>
+      <S.Card
+        role="button"
+        aria-label="open modal"
+        onClick={() => modalVerifiy(modal)}
+      >
         <S.ImageBox>
           <S.Image src={img} alt={title} />
         </S.ImageBox>
@@ -31,7 +36,11 @@ const Card = ({ img, title, modal }: CardProps) => {
       </S.Card>
 
       <S.Modal aria-label="modal" aria-hidden={!isOpen} isOpen={isOpen}>
-        <S.Close role="button" aria-label="close modal" onClick={() => setIsOpen(false)}>
+        <S.Close
+          role="button"
+          aria-label="close modal"
+          onClick={() => setIsOpen(false)}
+        >
           <Close size={30} />
         </S.Close>
 

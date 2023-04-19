@@ -1,24 +1,24 @@
 import { fireEvent, screen } from '@testing-library/react';
-import { mockPacientCards } from './mock';
+import mock, { mockWIthModal } from './mock';
 
 import Card from '.';
 import { renderWithTheme } from 'utils/tests/helper';
 
 describe('<Card />', () => {
   it('should render Card with title and img', () => {
-    renderWithTheme(<Card {...mockPacientCards[0]} />);
+    renderWithTheme(<Card {...mockWIthModal} />);
 
     expect(
-      screen.getByRole('heading', { name: mockPacientCards[0].title })
+      screen.getByRole('heading', { name: mockWIthModal.title })
     ).toBeInTheDocument();
 
     expect(
-      screen.getByRole('img', { name: mockPacientCards[0].title })
-    ).toHaveAttribute('src', mockPacientCards[0].img);
+      screen.getByRole('img', { name: mockWIthModal.title })
+    ).toHaveAttribute('src', mockWIthModal.img);
   });
 
   it('should render modal open', () => {
-    renderWithTheme(<Card {...mockPacientCards[0]} />);
+    renderWithTheme(<Card {...mockWIthModal} />);
 
     //seleciona o modal
     const modal = screen.getByLabelText('modal');
@@ -39,7 +39,7 @@ describe('<Card />', () => {
   });
 
   it('should render modal close', () => {
-    renderWithTheme(<Card {...mockPacientCards[0]} />);
+    renderWithTheme(<Card {...mockWIthModal} />);
 
     //seleciona o modal
     const modal = screen.getByLabelText('modal');
@@ -64,20 +64,20 @@ describe('<Card />', () => {
   });
 
   it('should render modal content', () => {
-    renderWithTheme(<Card {...mockPacientCards[0]} />);
+    renderWithTheme(<Card {...mockWIthModal} />);
     const openModalButton = screen.getByRole('button', { name: /open modal/i });
 
     fireEvent.click(openModalButton);
     expect(
-      screen.getAllByRole('heading', { name: mockPacientCards[0].title })
+      screen.getAllByRole('heading', { name: mockWIthModal.title })
     ).toHaveLength(2);
 
-    expect(screen.getByText(mockPacientCards[0].modal));
+    expect(screen.getByText(mockWIthModal.modal));
   });
 
   it('does not should render modal if no modalText is present', () => {
     const { container } = renderWithTheme(
-      <Card img="teste img" title="title test" />
+      <Card {...mock} img="teste img" title="title test" />
     );
 
     const openModalButton = screen.getByRole('button', { name: /open modal/i });

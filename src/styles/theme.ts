@@ -34,6 +34,7 @@ export default {
     white: '#F8FAFC',
     gray: '#475569',
     darkGray: '#64748B',
+    lightGray: '#78909C',
     black: '#334155',
     orange: '#F0632B'
   },

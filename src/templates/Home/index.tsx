@@ -20,7 +20,12 @@ export type HomeTemplateProps = {
   news: NewsCardProps[];
 };
 
-const HomeTemplate = ({ banners, courses, pacientHighlight, news }: HomeTemplateProps) => (
+const HomeTemplate = ({
+  banners,
+  courses,
+  pacientHighlight,
+  news
+}: HomeTemplateProps) => (
   <Base>
     <S.SectionBanner>
       <BannerSlider items={banners} />
@@ -30,7 +35,7 @@ const HomeTemplate = ({ banners, courses, pacientHighlight, news }: HomeTemplate
 
       <Grid>
         {courses.map((course) => (
-          <Link key={course.title} href="/cursos">
+          <Link key={course.title} href={course.slug}>
             <Card {...course} />
           </Link>
         ))}
@@ -38,9 +43,11 @@ const HomeTemplate = ({ banners, courses, pacientHighlight, news }: HomeTemplate
     </S.SectionCourses>
 
     <ShowCase heading="A Escola">
-      Com a proposta de inovação na área de educação, a Ícone Pós-graduação surge trazendo cursos de especialização e
-      atualização em Implantodontia. Com um corpo docente referência em implantodontia na Bahia, nossa equipe está
-      empenhada em promover uma experiência única de aprendizado! Vamos juntos!
+      Com a proposta de inovação na área de educação, a Ícone Pós-graduação
+      surge trazendo cursos de especialização e atualização em Implantodontia.
+      Com um corpo docente referência em implantodontia na Bahia, nossa equipe
+      está empenhada em promover uma experiência única de aprendizado! Vamos
+      juntos!
     </ShowCase>
 
     <ShowCase heading="Central do paciente" highlight={pacientHighlight} />

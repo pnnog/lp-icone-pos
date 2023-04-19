@@ -38,27 +38,22 @@ export const MenuNav = styled.div`
       cursor: pointer;
       font-weight: ${theme.font.extraBold};
 
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 0;
+        height: 0.3rem;
+        background-color: ${theme.colors.orange};
+        transition: width 0.4s ease-out;
+      }
+
       &:hover {
         ::after {
-          content: '';
-          position: absolute;
-          bottom: -0.5rem;
-          height: 0.3rem;
-          background-color: ${theme.colors.orange};
-          animation: hoverAnimation 0.2s forwards;
-          @keyframes hoverAnimation {
-            from {
-              width: 0;
-              left: 50%;
-            }
-            to {
-              width: 100%;
-              left: 0;
-            }
-          }
+          width: 100%;
         }
       }
-    }
     }
   `}
 `;

@@ -45,12 +45,12 @@ body{
   background-image: url('/img/background-image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
+${({ theme }) => css`
+  background-color: ${theme.colors.white};
+`}
   ::before, ::after {
   }
 }
-
-
 
 ${({ theme }) => css`
   html {
