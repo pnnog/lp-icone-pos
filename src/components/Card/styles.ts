@@ -126,7 +126,8 @@ export const Modal = styled.div<ModalProps>`
     width: 100%;
     height: 100%;
     z-index: ${theme.layers.modal};
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     display: flex;
     padding-left: ${theme.spacings.xsmall};

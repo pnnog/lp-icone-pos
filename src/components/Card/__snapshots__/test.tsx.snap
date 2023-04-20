@@ -77,7 +77,8 @@ exports[`<Card /> does not should render modal if no modalText is present 1`] = 
   width: 100%;
   height: 100%;
   z-index: 40;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
