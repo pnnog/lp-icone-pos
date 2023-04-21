@@ -6,17 +6,16 @@ export const Wrapper = styled.div`
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-  overflow-x: hidden;
-`;
-
-export const SectionMenu = styled.section`
-  ${({ theme }) => css`
-    background-color: ${theme.colors.primary};
-  `}
 `;
 
 export const Content = styled.div`
   flex: 1 0 auto;
+  padding-top: 6.3rem;
+
+  ${media.greaterThan('medium')`
+  padding-top: 7.8rem;
+
+`}
 `;
 export const SectionFooter = styled.section`
   ${({ theme }) => css`

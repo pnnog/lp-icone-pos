@@ -1,18 +1,37 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
-export const Wrapper = styled.menu<FullMenuProps>`
-  ${({ theme, isOpen }) => css`
-    padding: ${theme.spacings.small} 0;
-    background: ${theme.colors.primary};
+type WrapperPops = {
+  isScrolling: boolean;
+} & Pick<FullMenuProps, 'isOpen'>;
+
+export const Wrapper = styled.header<WrapperPops>`
+  ${({ theme, isOpen, isScrolling }) => css`
+    position: fixed;
+    min-width: 100%;
+    top: 0;
     z-index: ${!isOpen ? theme.layers.menu : `calc(${theme.layers.menu} - 1)`};
+    background: ${theme.colors.primary};
+    opacity: ${isScrolling && !isOpen ? '0.8' : '1'};
+    transition: opacity 0.3s ease-in-out;
+  `}
+`;
+
+export const Menu = styled.menu`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.xxsmall} calc(${theme.grid.gutter} / 4);
+
+    width: 100%;
+    max-width: ${theme.grid.container};
+    margin-right: auto;
+    margin-left: auto;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     ${media.greaterThan('medium')`
-      padding: ${theme.spacings.small} 0;
+      
     `};
   `}
 `;
@@ -36,7 +55,7 @@ export const MenuNav = styled.div`
       position: relative;
       color: ${theme.colors.white};
       cursor: pointer;
-      font-weight: ${theme.font.extraBold};
+      font-weight: ${theme.font.bold};
 
       &::after {
         content: '';
@@ -70,8 +89,7 @@ export const FullMenu = styled.nav<FullMenuProps>`
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    overflow: hidden;
+
     pointer-events: ${isOpen ? 'all' : 'none'};
     background-color: ${theme.colors.secondary};
     z-index: ${isOpen ? theme.layers.menu : `calc(${theme.layers.menu} - 1)`};
@@ -94,21 +112,20 @@ export const FullMenu = styled.nav<FullMenuProps>`
       align-items: center;
       flex: 1;
       justify-content: center;
-    }
 
-    a {
-      font-size: ${theme.font.sizes.small};
-      font-weight: ${theme.font.bold};
-      margin: 0 0 ${theme.spacings.small} 0;
-      transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
-      transition: transform 0.3s ease-in-out;
+      a {
+        font-size: ${theme.font.sizes.small};
+        font-weight: ${theme.font.bold};
+        margin: 0 0 ${theme.spacings.small} 0;
+        transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
+        transition: transform 0.3s ease-in-out;
 
-      ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.xlarge};
-      font-weight: ${theme.font.bold};
-      margin: 0 0 ${theme.spacings.medium} 0;
-
-    `}
+        ${media.greaterThan('medium')`
+          font-size: ${theme.font.sizes.xlarge};
+          font-weight: ${theme.font.bold};
+          margin: 0 0 ${theme.spacings.medium} 0;
+        `}
+      }
     }
   `}
 `;
