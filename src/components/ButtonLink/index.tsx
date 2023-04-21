@@ -9,7 +9,10 @@ export type ButtonLinkProps = {
   fullWidth?: boolean;
 } & AnchorTypes;
 
-const ButtonLink: React.ForwardRefRenderFunction<S.WrapperProps, ButtonLinkProps> = (
+const ButtonLink: React.ForwardRefRenderFunction<
+  S.WrapperProps,
+  ButtonLinkProps
+> = (
   { children, fullWidth = false, href = 'http://www.whatsapp.com', target },
   ref
 ) => (
